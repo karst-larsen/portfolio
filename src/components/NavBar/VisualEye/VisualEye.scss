@@ -61,36 +61,47 @@
 .visual-eye {
     display: flex;
     position: relative;
-    animation: blink 0.46875s ease-in-out infinite;
     height: auto;
     width: 15rem;
     height: 12rem;
     margin: 2rem auto;
-    transition: all 0.1s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    transition: transform 5s linear;
 
-    &:hover {
-        transform: scale(1.1, 1.1);
-        transition: all 0.1s ease-in-out;
-        cursor: pointer;
-    }
-
+    
     &__spiral {
         position: relative;
-        top: -0.5rem;
+        top: -0.45rem;
         left: 0.7rem;
         height: 13.75rem;
         z-index: 1;
-        animation: spiralMotion 8s linear infinite;
+        user-select: none;
+        transform: rotateZ(0deg);
+        transition: all 15s ease-in-out;
     }
 
+    &:hover {
+        transform: scale(1.2, 1.2);
+        transition: all 10s linear;
+        
+        .visual-eye__spiral {
+            // animation: spiralMotion 8s linear infinite;
+            transform: rotateZ(14400deg);
+            transition: all 60s ease-in-out;
+        }
+    }
+    
     &__eye {
         position: relative;
         right: 13rem;
         top: -0.5rem;
         height: 14rem;
         z-index: 3;
+        user-select: none;
+        -webkit-user-drag: none;
     }
-
+    
     &__mask {
         position: relative;
         right: 22rem;
@@ -98,6 +109,7 @@
         height: 15rem;
         z-index: 2;
         animation: motion 8s ease-in infinite;
+        user-select: none;
     }
 
     &__transparent-eye {
