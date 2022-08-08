@@ -1,3 +1,6 @@
+import "animate.css/animate.min.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import myIcon from './assets/images/BSTN-May-2022-Toront-CT-Headshot-40 1.svg'
@@ -7,6 +10,7 @@ import emailIcon from './assets/icons/XMLID_1_.svg'
 import VisualEye from './components/NavBar/VisualEye/VisualEye';
 
 function App() {
+  AOS.init();
   return (
     <div className="App">
       <header className="App-header">
