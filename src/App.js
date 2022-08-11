@@ -10,6 +10,26 @@ import gitHub from './assets/icons/25231 1.svg'
 import emailIcon from './assets/icons/XMLID_1_.svg'
 import VisualEye from './components/NavBar/VisualEye/VisualEye';
 import Greeting from "./components/Greeting/Greeting";
+import photoShopIcon from './assets/icons/photoshop.svg'
+import illustratorIcon from './assets/icons/illustrator.svg'
+import auditionIcon from './assets/icons/audition.svg'
+import inDesignIcon from './assets/icons/indesign.svg'
+import afterEffectsIcon from './assets/icons/aftereffects.svg'
+import premiereProIcon from './assets/icons/premierepro.svg'
+import dreamweaverIcon from './assets/icons/dreamweaver.svg'
+import abletonIcon from './assets/icons/ableton.svg'
+import figmaIcon from './assets/icons/figma.svg'
+import proToolsIcon from './assets/icons/protools.svg'
+import htmlIcon from './assets/icons/html.svg'
+import cssIcon from './assets/icons/css.svg'
+import javascriptIcon from './assets/icons/javascript.svg'
+import sassIcon from './assets/icons/sass.svg'
+import reactIcon from './assets/icons/react.svg'
+import knexIcon from './assets/icons/knex.svg'
+import mysqlIcon from './assets/icons/mysql.svg'
+import toneIcon from './assets/icons/tone.svg'
+import nodeIcon from './assets/icons/node.svg'
+import expressIcon from './assets/icons/express.svg'
 
 
 class App extends Component {
@@ -39,7 +59,7 @@ class App extends Component {
     if (prevState.counter !== this.state.counter) {
       setTimeout(() => {
         this.changeGreeting()
-      }, 4980)
+      }, 4975)
     }
   }
   
@@ -87,8 +107,38 @@ class App extends Component {
           </section>
           <section className="creative">
             <div className="creative__responsive-container">
-              <h1 className="creative__header" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750">Creative Development</h1>
-              <p className="creative__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750">I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
+              <h1 className="creative__header" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
+              <p className="creative__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. Here's a few of my relevant development competencies: </p>
+              <div className="creative__technologies">
+                <div className="creative__tech-category">
+                  <span className="creative__label"data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Production and Design</span>
+                  <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <img className="creative__icon" src={photoShopIcon} alt="Photoshop Logo" />
+                    <img className="creative__icon" src={auditionIcon} alt="Audition Logo" />
+                    <img className="creative__icon" src={illustratorIcon} alt="Illustrator Logo" />
+                    <img className="creative__icon" src={dreamweaverIcon} alt="Dreamweaver Logo" />
+                    <img className="creative__icon" src={inDesignIcon} alt="InDesign Logo" />
+                    <img className="creative__icon" src={afterEffectsIcon} alt="After Effects Logo" />
+                    <img className="creative__icon" src={premiereProIcon} alt="Premiere Pro Logo" />
+                    <img className="creative__icon" src={abletonIcon} alt="Ableton Logo" />
+                    <img className="creative__icon" src={figmaIcon} alt="Figma Logo" />
+                  </div>
+                </div>
+                <div className="creative__tech-category">
+                  <span className="creative__label" data-aos="fade-up" data-aos-delay="1250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Languages and Frameworks</span>
+                  <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">
+                    <img className="creative__icon" src={htmlIcon} alt="HTML Logo" />
+                    <img className="creative__icon" src={cssIcon} alt="CSS Logo" />
+                    <img className="creative__icon" src={javascriptIcon} alt="Javascript Logo" />
+                    <img className="creative__icon" src={sassIcon} alt="Sass Logo" />
+                    <img className="creative__icon" src={reactIcon} alt="ReactJS Logo" />
+                    <img className="creative__icon" src={mysqlIcon} alt="MySQL Logo" />
+                    <img className="creative__icon" src={toneIcon} alt="ToneJS Logo" />
+                    <img className="creative__icon" src={expressIcon} alt="Express Logo" />
+                    <img className="creative__icon" src={nodeIcon} alt="NodeJS Logo" />
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           {/* <section className="projects">
