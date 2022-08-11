@@ -30,6 +30,9 @@ import mysqlIcon from './assets/icons/mysql.svg'
 import toneIcon from './assets/icons/tone.svg'
 import nodeIcon from './assets/icons/node.svg'
 import expressIcon from './assets/icons/express.svg'
+import brainstationIcon from './assets/icons/brainstation.svg'
+import nameLogo from './assets/icons/nameLogo.svg'
+import visualEyesLogo from './assets/icons/VisualEyesLogo.svg'
 
 
 class App extends Component {
@@ -71,7 +74,7 @@ class App extends Component {
         <header className="App-header">
           <NavBar />
         </header>
-        <section className="personal">
+        <section className="personal" id="home">
           <div className="personal__responsive-container">
             <div className="personal__images-icons">
               <img src={myIcon} 
@@ -81,38 +84,61 @@ class App extends Component {
               data-aos-delay="1250"
               data-aos-duration="1000" 
               />
-              <div className="personal__links" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-offset="-200">
-                <img src={linkedIn} alt="LinkedIn Icon" className="personal__icon" />
-                <img src={gitHub} alt="GitHub Icon" className="personal__icon"/>
-                <img src={emailIcon} alt="E-Mail Icon" className="personal__icon" />
+              <div className="personal__links" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-offset="-200">
+                <a href="https://www.linkedin.com/in/karsten-larsen/" target="blank"><img src={linkedIn} alt="LinkedIn Icon" className="personal__icon" /></a>
+                <a href="https://www.github.com/karst-larsen" target="blank"><img src={gitHub} alt="GitHub Icon" className="personal__icon"/></a>
+                <a href="mailto:karsten.oneill@hotmail.ca"><img src={emailIcon} alt="E-Mail Icon" className="personal__icon" /></a>
               </div>
             </div>
             <h1 className="personal__header">
               <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="750">Karsten O'Neill-Larsen
               </span>
                 <br />
-              <span className="personal__header-line personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out">Full-Stack Web Developer</span> <br />
+              <span className="personal__header-line personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out">Web Developer Portfolio</span> <br />
               <Greeting greeting={this.state.greeting} />
               <span className="personal__hand" data-aos="fade-up" data-aos-delay="2500" data-aos-duration="750" data-aos-easing="ease-in-out">👋🏽</span>
             </h1>
             </div>
-            {/* <div className="personal__information-box" data-aos="fade-up" data-aos-delay="2400" data-aos-duration="1000" data-aos-easing="ease-out">
-            <p className="personal__information" >
-            I’m a <span className="personal--bold">full stack developer</span> based out of Toronto, Ontario.
-            </p>
-            <p className="personal__information">I have been a creative developer for my entire life. From editing YouTube videos at a young age, to producing electronic music in digital audio workstations for friends to enjoy, up to building courses for associations as an eLearning developer. </p>
-            <p className="personal__information">I fell into programming as a relative practice to much of what I’ve been involved with as hobby. Experimenting with code and wanting to bring creative ideas to life accelerated my desire to understand the root of how programming languages worked. In that chase, a new passion grew for me. </p>
-            <p className="personal__information">Now, as a recent graduate from BrainStation’s Web Development Diploma Program, I have the ability to build websites and web applications from front to back, backed up with years of meticulous editing practice under my belt.</p>
-            </div> */}
           </section>
-          <section className="creative">
+          <section className="about" id="about">
+          <div className="about__responsive-container">
+            <div className="about__text-container">
+              <h1 className="about__header" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
+              <p className="about__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
+            </div>
+            <div className="about__text-container">  
+              <div className="about__brainstation-graduate">
+              <img className="about__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
+              <h2 className="about__graduate-label" data-aos="fade-right" data-aos-delay="750" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">BrainStation Graduate</h2>
+              </div>
+              <p className="about__information" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-once="true">Now, as a graduate from BrainStation's Web Development Bootcamp Diploma Program, I can build websites and web applications from front to back, supplemented by years of relative editing practice under my belt.  </p>
+            </div>
+            <div className="about__text-container">  
+              <p className="about__competencies" data-aos="fade-up" data-aos-delay="2500" data-aos-duration="750" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
+              <a href="#skills" className="about__competencies--link"><p className="about__competencies" data-aos="fade-up" data-aos-delay="2750" data-aos-duration="750" data-aos-once="true" data-aos-offset="-50">Here's what I know so far:</p></a>
+            </div>
+          </div>
+          </section>
+          <section className="creative" id="skills">
             <div className="creative__responsive-container">
-              <h1 className="creative__header" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
-              <p className="creative__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. Here's a few of my relevant development competencies: </p>
               <div className="creative__technologies">
+              <div className="creative__tech-category">
+                  <span className="creative__label" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</span>
+                  <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <img className="creative__icon" src={htmlIcon} alt="HTML Logo" />
+                    <img className="creative__icon" src={cssIcon} alt="CSS Logo" />
+                    <img className="creative__icon" src={javascriptIcon} alt="Javascript Logo" />
+                    <img className="creative__icon" src={sassIcon} alt="Sass Logo" />
+                    <img className="creative__icon creative--react" src={reactIcon} alt="ReactJS Logo" />
+                    <img className="creative__icon" src={mysqlIcon} alt="MySQL Logo" />
+                    <img className="creative__icon" src={toneIcon} alt="ToneJS Logo" />
+                    <img className="creative__icon" src={expressIcon} alt="Express Logo" />
+                    <img className="creative__icon" src={nodeIcon} alt="NodeJS Logo" />
+                  </div>
+                </div>
                 <div className="creative__tech-category">
-                  <span className="creative__label"data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Production and Design</span>
-                  <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
+                  <span className="creative__label" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Production and Design</span>
+                  <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">
                     <img className="creative__icon" src={photoShopIcon} alt="Photoshop Logo" />
                     <img className="creative__icon" src={auditionIcon} alt="Audition Logo" />
                     <img className="creative__icon" src={illustratorIcon} alt="Illustrator Logo" />
@@ -124,29 +150,23 @@ class App extends Component {
                     <img className="creative__icon" src={figmaIcon} alt="Figma Logo" />
                   </div>
                 </div>
-                <div className="creative__tech-category">
-                  <span className="creative__label" data-aos="fade-up" data-aos-delay="1250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Languages and Frameworks</span>
-                  <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">
-                    <img className="creative__icon" src={htmlIcon} alt="HTML Logo" />
-                    <img className="creative__icon" src={cssIcon} alt="CSS Logo" />
-                    <img className="creative__icon" src={javascriptIcon} alt="Javascript Logo" />
-                    <img className="creative__icon" src={sassIcon} alt="Sass Logo" />
-                    <img className="creative__icon" src={reactIcon} alt="ReactJS Logo" />
-                    <img className="creative__icon" src={mysqlIcon} alt="MySQL Logo" />
-                    <img className="creative__icon" src={toneIcon} alt="ToneJS Logo" />
-                    <img className="creative__icon" src={expressIcon} alt="Express Logo" />
-                    <img className="creative__icon" src={nodeIcon} alt="NodeJS Logo" />
-                  </div>
-                </div>
               </div>
             </div>
           </section>
-          {/* <section className="projects">
-            <h2 className="projects__header">Application Highlight</h2>
-            <p className="projects__information">My first major application from my BrainStation capstone project is called VisualEyes, an interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
-            <p className="projects__information">I’ll be adding more applications of interest over time, so be sure to check back. </p>
+          <section className="capstone" id="capstone">
+            <div className="capstone__equation">
+              <img className="capstone__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="zoom-in" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
+              <span className="capstone__multiply" data-aos="zoom-in" data-aos-delay="750" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">X</span>
+              <img src={nameLogo} alt="Name Logo" className="capstone__name" data-aos="zoom-in" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true"/>
+            </div>
+            <div className="capstone__visualeyes-container" data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1200" data-aos-once="true">
           <VisualEye />
-          </section> */}
+          <img src={visualEyesLogo} alt="VisualEyes Logo" className="capstone__visualeyes-logo"/>
+          </div>
+            <h3 className="projects__header">Application Highlight</h3>
+            <p className="capstone__information">My first web application that I created for BrainStation's capstone project is VisualEyes, an interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
+            <p className="capstone__information">I’ll be adding more applications of interest over time, so be sure to check back. </p>
+          </section>
       </div>
     );
   }

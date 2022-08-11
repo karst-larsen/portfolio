@@ -45,14 +45,26 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1.1, 1.1)
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1, 1.1)
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1, 1.1)
+  }
+}
+
 html {
   width: 100vw;
-  // background-color: #e5e4f5;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 
 }
 
 .App {
-  // background-color: #e5e4f5;
   width: 100%;
   color: #303030;
 }
@@ -63,25 +75,19 @@ html {
 
 .App-header {
   background-color: #e5e4f5;
-  // border: 1px solid black;
-  // position: fixed;
-  // width: 100%;
   display: flex;
-  // margin-bottom: 2rem;
 }
 
 .header {
   display: flex;
   width: 100%;
+  min-width: 16rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  // border-bottom: 1px solid #303030;
-  // transition: all 0.5s ease-in-out; 
 
   @media screen and (min-width: 768px) {
     padding: 1rem 4rem;
-    // transition: all 0.5s ease-in-out; 
   }
 
   &__name {
@@ -89,12 +95,15 @@ html {
   }
 
   &__right-header {
-    width: 9rem;
+    width: 15rem;
   }
 
   &__logo {
+    font-size: 1.25rem;
     text-align: right;
-    font-weight: bold;
+    font-weight: 800;
+    line-height: 80%;
+    letter-spacing: -1px;
     cursor: pointer;
   }
   
@@ -109,56 +118,50 @@ html {
   
   &__nav-link {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+      font-weight: bold;
+    }
   }
 }
 
 .personal {
   display: flex;
   height: calc(100vh - 70px);
-  // width: 100%;
   padding: 0 2rem;
   text-align: center;
   margin: 0 auto;
   background-color: #e5e4f5;
+  min-width: 16rem;
   
   @media screen and (min-width: 768px) {
     padding: 0 4rem;
-    // transition: all 0.5s ease-in-out; 
   }
   
   &__responsive-container {
     display: flex;
     width: 100%;
     flex-direction: column-reverse;
-    max-width: 100rem;
+    max-width: 59.375rem;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    // height: 80vh;
-    // position: relative;
-
-
-    // border-bottom: 1px solid #303030;
     padding-bottom: 1rem;
-    // transition: all 0.5s ease-in-out;
     
     @media screen and (min-width: 768px) {
       flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: space-evenly;
+      align-items: space-evenly;
     }
-
-    
-    // @media screen and (min-width: 768px) {
-    //   height: 290px;
-    //   // transition: all 0.5s ease-in-out; 
-    // }
   }
 
   &__hand {
     display: inline-block;
     margin-left: 0.5rem;
-    font-size: 6vw;
+    font-size: 2rem;
     animation: wave 5s ease-in-out infinite;
     animation-delay: 3200ms;
     transform-origin: 70% 70%;
@@ -166,13 +169,13 @@ html {
     -webkit-user-drag: none;
 
     @media screen and (min-width: 768px) {
-      font-size: 4vw;
+      font-size: 3rem;
     }
   }
   
   &__header {
     width: 100%;
-    font-size: 7vw;
+    font-size: 1.5rem;
     font-weight: normal;
     text-align: left;
     position: relative;
@@ -180,7 +183,7 @@ html {
 
     @media screen and (min-width: 768px) {
     width: 60%;
-    font-size: 4vw;
+    font-size: 2rem;
     text-align: left;
     }
   }
@@ -191,11 +194,11 @@ html {
 
   &__header-subline {
     display: inline-block;
-    font-size: 5vw;
+    font-size: 1.2rem;
     transition: all 0.5s linear;
 
     @media screen and (min-width: 768px) {
-      font-size: 3vw;
+      font-size: 1.5rem;
     }  
   }
 
@@ -210,6 +213,7 @@ html {
   &__images-icons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     
     @media screen and (min-width: 768px) {
@@ -218,22 +222,21 @@ html {
   }
 
   &__image {
-    height: 50vw;
-    // max-height: 400px;
-    width: 100%;
+    border-radius: 50% 50%;
+    cursor: pointer;
+    height: 17rem;
 
-    @media screen and (min-width: 768px) {
-      height: 30vw;
+    @media screen and (min-width: 1080px) {
+      height: 20rem;
     }
   }
 
   &__icon {
     margin: 0.5rem;
-    height: 1.5625rem;
+    height: 1.25rem;
     cursor: pointer;
     transform: scale(1, 1);
     transition: all 0.2s ease-in-out;
-    
     
     &:hover {
       transform: scale(1.25, 1.25);
@@ -251,7 +254,6 @@ html {
 
     @media screen and (min-width: 768px) {
       font-size: 1rem;
-      // transition: all 0.5s ease-in-out;
     }
 
     &:last-child {
@@ -275,10 +277,10 @@ html {
   }
 
   &__position {
-    font-size: 5vw;
+    font-size: 1.1rem;
 
     @media screen and (min-width: 768px) {
-      font-size: 3vw;
+      font-size: 1.5rem;
     }
   }
 }
@@ -287,48 +289,67 @@ html {
 .creative {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  // align-content: space-around;
   padding: 0 2rem;
   text-align: left;
   background-color: #E4F5E5;
+  // height: auto;
+  min-width: 16rem;
+
+  @media screen and (min-height: 700px ) {
+    // height: 100vh;
+  }
   
   @media screen and (min-width: 768px) {
     padding: 0 4rem;
   }
   
   &__responsive-container {
-    // background-color: #E4F5E5;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     max-width: 100rem;
+    height: 100vh;
+    max-width: 100rem;
     margin: 0 auto;
-    // height: 100vh;
+    // height: auto;
+
+    // @media screen and (min-height: 60rem) {
+    //   height: 100vh;   
+    //  }
   }
   
   &__header {
-    font-size: 7vw;
+    font-size: 2rem;
     
     @media screen and (min-width: 768px) {
-      font-size: 4vw;
+      font-size: 1.5rem;
     }
   }
   
   &__information {
-    font-size: 1rem;
+    font-size: .75rem;
+    margin-bottom: 2rem;
+
     @media screen and (min-width: 768px) {
-      font-size: 22px;
+      font-size: 1.375rem;
     }
   }
   
   &__technologies {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 100%;
   }
 
   &__label {
+    text-align: center;
     display: inline-block;
-    font-size: 1.5625rem;
+    font-size: 1.3125rem;
     font-weight: bold;
     margin: 2rem 0;
 
@@ -338,10 +359,10 @@ html {
     }
   }
 
+
   &__tech-category {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
@@ -349,8 +370,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
     width: 100%;
+    height: 15rem;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -358,49 +379,166 @@ html {
     // border: 1px solid black;
 
     @media screen and (min-width: 768px) {
+      max-height: 15rem;
       width: 100%;
     }
   }
 
   &__icon {
     padding: 1rem;
-    height: 7vh;
-    width: 7vh;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    flex-grow: 1;
 
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1, 1.1);
+    &:hover, &:focus {
       animation: wiggle 0.2s ease-in-out infinite;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &--react {
+    &:hover, &:focus {
+      animation: rotate 5s linear infinite;
     }
   }
 }
 
-.projects {
-  height: 500px;
-  background-color: white;
-  box-shadow: inset 0px 2px 5px #AAA;
-  padding: 2rem;
-  text-align: center;
-  // transition: all 0.5s ease-in-out; 
-
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  text-align: left;
+  background-color: #F5EDE4;
+  height: 100vh;
+  min-width: 16rem;
+  
   @media screen and (min-width: 768px) {
-    padding: 2rem 4rem;
-    // transition: all 0.5s ease-in-out; 
-  }
-
-  &__information {
-    text-align: left;
-    font-size: 0.75rem;
-    // transition: all 0.5s ease-in-out;
-
-    @media screen and (min-width: 768px) {
-      font-size: 1rem;
-      // transition: all 0.5s ease-in-out;
-    }
+    padding: 0 4rem;
   }
 
   &__header {
-    margin: 0;
-    text-align: left;
+    font-size: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  &__responsive-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 59.375rem;
+    margin: 0 auto;
+    height: 100vh;
+  }
+
+  &__brainstation-graduate {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+  &__brainstation {
+    height: 2rem;
+
+    @media screen and (min-width: 768px) {
+      height: 4rem;
+    }
+    
+  }
+
+  &__information {
+    font-size: 1.2rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem
+    }
+  }
+  
+  &__graduate-label {
+    font-size: 1.5rem;
+    margin-left: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__competencies {
+    font-size: 1.2rem;
+    align-self: flex-end;
+    font-weight: bold;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__competencies--link {
+    color: black;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+}
+
+.capstone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: left;
+  background-color: white;
+  // height: auto;
+  min-width: 16rem;
+  height: 100vh;
+
+  &__brainstation {
+    height: 6rem;
+  }
+
+  &__name {
+    width: 8rem;
+  }
+
+  &__equation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  &__multiply, &__equals {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin: 0 1rem;
+  }
+
+  &__visualeyes-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+    }
+
+  &__visualeyes-logo {
+    width: 14rem;
+    align-self: center;
+    position: relative;
+    left: 5px;
   }
 }
