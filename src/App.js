@@ -39,7 +39,8 @@ class App extends Component {
   state = {
     greetingsContainer: ['Hello', 'Bonjour', 'Hola', 'Olá', 'Hej', 'Ciao', 'こんにちは', 'Hei', 'Χαίρε', 'Hallo', 'Zdravo', 'مرحبا', '안녕', 'Cześć', 'Ahoj', '你好', 'Sveiki', 'Chào bạn'],
     counter: 0,
-    greeting: 'Hello'
+    greeting: 'Hello',
+    imageClicked: false
   }
 
   changeGreeting = () => {
@@ -65,6 +66,14 @@ class App extends Component {
       }, 4975)
     }
   }
+
+  toggleImage = () => {
+    this.setState({
+      imageClicked: !this.state.imageClicked
+    }, () => {
+      console.log('Image Clicked')
+    })
+  }
   
   render() {
     AOS.init();
@@ -77,12 +86,14 @@ class App extends Component {
         <section className="personal" id="home">
           <div className="personal__responsive-container">
             <div className="personal__images-icons">
-              <img src={myIcon} 
+              <img src={myIcon}
+              onClick={this.toggleImage} 
               alt="headshot" 
-              className="personal__image" 
               data-aos="zoom-in"
               data-aos-delay="1250"
-              data-aos-duration="1000" 
+              data-aos-duration="1000"
+              data-aos-once="true"
+              className="personal__image"
               />
               <div className="personal__links" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-offset="-200">
                 <a href="https://www.linkedin.com/in/karsten-larsen/" target="blank"><img src={linkedIn} alt="LinkedIn Icon" className="personal__icon" /></a>
@@ -115,12 +126,12 @@ class App extends Component {
             </div>
             <div className="about__text-container">  
               <p className="about__competencies" data-aos="fade-up" data-aos-delay="2500" data-aos-duration="750" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
-              <a href="#skills" className="about__competencies--link"><p className="about__competencies" data-aos="fade-up" data-aos-delay="2750" data-aos-duration="750" data-aos-once="true" data-aos-offset="-50">Here's what I know so far:</p></a>
+              <a href="#skills" className="about__competencies--link"><p className="about__competencies" data-aos="fade-up" data-aos-delay="2750" data-aos-duration="750" data-aos-once="true" data-aos-offset="-20">Here's what I know so far:</p></a>
             </div>
           </div>
           </section>
           <section className="creative" id="skills">
-            <div className="creative__responsive-container">
+            {/* <div className="creative__responsive-container"> */}
               <div className="creative__technologies">
               <div className="creative__tech-category">
                   <span className="creative__label" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</span>
@@ -150,7 +161,7 @@ class App extends Component {
                     <img className="creative__icon" src={figmaIcon} alt="Figma Logo" />
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </section>
           <section className="capstone" id="capstone">
@@ -163,8 +174,9 @@ class App extends Component {
           <VisualEye />
           <img src={visualEyesLogo} alt="VisualEyes Logo" className="capstone__visualeyes-logo"/>
           </div>
-            <h3 className="projects__header">Application Highlight</h3>
-            <p className="capstone__information">My first web application that I created for BrainStation's capstone project is VisualEyes, an interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
+            <p className="capstone__information">An interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
+            <a href="https://visual-eyes-pi.vercel.app/">Play</a>
+            <a href="https://github.com/karst-larsen/VisualEyes">GitHub</a>
             <p className="capstone__information">I’ll be adding more applications of interest over time, so be sure to check back. </p>
           </section>
       </div>

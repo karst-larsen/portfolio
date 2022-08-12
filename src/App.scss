@@ -58,14 +58,16 @@
 }
 
 html {
-  width: 100vw;
+  // width: 100vw;
   scroll-behavior: smooth;
   box-sizing: border-box;
 
 }
 
 .App {
-  width: 100%;
+  margin: 0 auto;
+  min-width: 100%;
+  height: 100%;
   color: #303030;
 }
 
@@ -95,7 +97,7 @@ html {
   }
 
   &__right-header {
-    width: 15rem;
+    width: 16rem;
   }
 
   &__logo {
@@ -113,7 +115,7 @@ html {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: .75rem;
+    font-size: .875rem;
   }
   
   &__nav-link {
@@ -123,14 +125,14 @@ html {
 
     &:hover, &:focus {
       text-decoration: underline;
-      font-weight: bold;
+      // font-weight: bold;
     }
   }
 }
 
 .personal {
   display: flex;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   padding: 0 2rem;
   text-align: center;
   margin: 0 auto;
@@ -190,6 +192,9 @@ html {
   
   &__header-line {
     display: inline-block;
+    font-weight: 800;
+    line-height: 80%;
+    letter-spacing: -1px;
   }
 
   &__header-subline {
@@ -222,12 +227,19 @@ html {
   }
 
   &__image {
+    position: relative;
     border-radius: 50% 50%;
     cursor: pointer;
     height: 17rem;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out;
 
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1280px) {
       height: 20rem;
+    }
+
+    &--clicked {
+      transform: rotateY(180deg)
     }
   }
 
@@ -290,36 +302,29 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  // align-content: space-around;
-  padding: 0 2rem;
+  align-content: space-around;
+  padding: 0 2rem 2rem 2rem;
   text-align: left;
   background-color: #E4F5E5;
-  // height: auto;
   min-width: 16rem;
-
-  @media screen and (min-height: 700px ) {
-    // height: 100vh;
-  }
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
   
   @media screen and (min-width: 768px) {
-    padding: 0 4rem;
+    padding: 0 4rem 2rem 4rem;
   }
   
-  &__responsive-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 100rem;
-    height: 100vh;
-    max-width: 100rem;
-    margin: 0 auto;
-    // height: auto;
-
-    // @media screen and (min-height: 60rem) {
-    //   height: 100vh;   
-    //  }
-  }
+  // &__responsive-container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-around;
+  //   width: 100%;
+  //   height: 100%;
+  //   min-height: 100vh;
+  //   max-width: 100rem;
+  //   margin: 0 auto;
+  // }
   
   &__header {
     font-size: 2rem;
@@ -344,6 +349,7 @@ html {
     flex-wrap: nowrap;
     justify-content: space-around;
     height: 100%;
+    flex-grow: 1;
   }
 
   &__label {
@@ -371,7 +377,8 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 15rem;
+    height: 45rem;
+    max-height: 18rem;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -379,15 +386,18 @@ html {
     // border: 1px solid black;
 
     @media screen and (min-width: 768px) {
-      max-height: 15rem;
-      width: 100%;
+      max-height: 18rem;
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-height: 25rem;
     }
   }
 
   &__icon {
     padding: 1rem;
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     cursor: pointer;
     flex-grow: 1;
 
@@ -396,8 +406,13 @@ html {
     }
 
     @media screen and (min-width: 768px) {
-      height: 3rem;
-      width: 3rem;
+      height: 4rem;
+      width: 4rem;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 5rem;
+      width: 5rem;
     }
   }
 
@@ -414,8 +429,9 @@ html {
   padding: 0 2rem;
   text-align: left;
   background-color: #F5EDE4;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 16rem;
+  // margin: auto;
   
   @media screen and (min-width: 768px) {
     padding: 0 4rem;
@@ -436,7 +452,7 @@ html {
     width: 100%;
     max-width: 59.375rem;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   &__brainstation-graduate {
@@ -479,12 +495,12 @@ html {
     font-weight: bold;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.625rem;
     }
   }
 
   &__competencies--link {
-    color: black;
+    color: #303030;
     width: 100%;
 
     @media screen and (min-width: 768px) {
@@ -498,12 +514,18 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 2rem;
+  padding: 2rem;
   text-align: left;
   background-color: white;
   // height: auto;
   min-width: 16rem;
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 59.375rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 2rem 4rem;
+  }
 
   &__brainstation {
     height: 6rem;
@@ -529,6 +551,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-self: flex-start;
+    
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
