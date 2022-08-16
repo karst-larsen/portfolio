@@ -31,6 +31,7 @@ import toneIcon from './assets/icons/tone.svg'
 import nodeIcon from './assets/icons/node.svg'
 import expressIcon from './assets/icons/express.svg'
 import brainstationIcon from './assets/icons/brainstation.svg'
+import brainstationIconBlue from './assets/icons/BrainStationLogoBlue.svg'
 import nameLogo from './assets/icons/nameLogo.svg'
 import visualEyesLogo from './assets/icons/VisualEyesLogo.svg'
 
@@ -80,12 +81,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header" id="home">
           <NavBar />
         </header>
-        <section className="personal" id="home">
+        <section className="personal">
           <div className="personal__responsive-container">
-            <div className="personal__images-icons">
+            {/* <div className="personal__images-icons">
               <img src={myIcon}
               onClick={this.toggleImage} 
               alt="headshot" 
@@ -100,41 +101,41 @@ class App extends Component {
                 <a href="https://www.github.com/karst-larsen" target="blank"><img src={gitHub} alt="GitHub Icon" className="personal__icon"/></a>
                 <a href="mailto:karsten.oneill@hotmail.ca"><img src={emailIcon} alt="E-Mail Icon" className="personal__icon" /></a>
               </div>
-            </div>
+            </div> */}
             <h1 className="personal__header">
-              <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="750">Karsten O'Neill-Larsen
+              <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="750">Hey, <br />I'm Karsten Larsen
+              <span className="personal__hand" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out">👋🏽</span>
               </span>
                 <br />
-              <span className="personal__header-line personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out">Web Developer Portfolio</span> <br />
-              <Greeting greeting={this.state.greeting} />
-              <span className="personal__hand" data-aos="fade-up" data-aos-delay="2500" data-aos-duration="750" data-aos-easing="ease-in-out">👋🏽</span>
+                <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" />
+              <span className="personal__header-subline personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out">I'm a Junior Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
+              {/* <Greeting greeting={this.state.greeting} /> */}
             </h1>
             </div>
           </section>
           <section className="about" id="about">
           <div className="about__responsive-container">
             <div className="about__text-container">
-              <h1 className="about__header" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
-              <p className="about__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
+              <h1 className="about__header" data-aos="fade-left" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
+              <p className="about__information" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
             </div>
             <div className="about__text-container">  
               <div className="about__brainstation-graduate">
-              <img className="about__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
+              <img className="about__brainstation" src={brainstationIconBlue} alt="Brainstation Logo" data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
               <h2 className="about__graduate-label" data-aos="fade-right" data-aos-delay="750" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">BrainStation Graduate</h2>
               </div>
-              <p className="about__information" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-once="true">Now, as a graduate from BrainStation's Web Development Bootcamp Diploma Program, I can build websites and web applications from front to back, supplemented by years of relative editing practice under my belt.  </p>
+              <p className="about__information" data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="750" data-aos-once="true">Now, as a graduate from BrainStation's Web Development Bootcamp Diploma Program, I can build websites and web applications from front to back, supplemented by years of relative editing practice under my belt.  </p>
             </div>
             <div className="about__text-container">  
-              <p className="about__competencies" data-aos="fade-up" data-aos-delay="2500" data-aos-duration="750" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
-              <a href="#skills" className="about__competencies--link"><p className="about__competencies" data-aos="fade-up" data-aos-delay="2750" data-aos-duration="750" data-aos-once="true" data-aos-offset="-20">Here's what I know so far:</p></a>
+              <p className="about__competencies" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
+              <a href="#skills" className="about__competencies--link"><p className="about__competencies" data-aos="fade-up" data-aos-delay="1750" data-aos-duration="750" data-aos-once="true" data-aos-offset="-20">Here's what I know so far:</p></a>
             </div>
           </div>
           </section>
           <section className="creative" id="skills">
-            {/* <div className="creative__responsive-container"> */}
               <div className="creative__technologies">
               <div className="creative__tech-category">
-                  <span className="creative__label" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</span>
+                  <h2 className="creative__label" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</h2>
                   <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
                     <img className="creative__icon" src={htmlIcon} alt="HTML Logo" />
                     <img className="creative__icon" src={cssIcon} alt="CSS Logo" />
@@ -148,7 +149,7 @@ class App extends Component {
                   </div>
                 </div>
                 <div className="creative__tech-category">
-                  <span className="creative__label" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Production and Design</span>
+                  <h2 className="creative__label" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Production and Design</h2>
                   <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">
                     <img className="creative__icon" src={photoShopIcon} alt="Photoshop Logo" />
                     <img className="creative__icon" src={auditionIcon} alt="Audition Logo" />
@@ -161,25 +162,33 @@ class App extends Component {
                     <img className="creative__icon" src={figmaIcon} alt="Figma Logo" />
                   </div>
                 </div>
-              {/* </div> */}
             </div>
           </section>
           <section className="capstone" id="capstone">
-            <div className="capstone__equation">
-              <img className="capstone__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="zoom-in" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
-              <span className="capstone__multiply" data-aos="zoom-in" data-aos-delay="750" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">X</span>
-              <img src={nameLogo} alt="Name Logo" className="capstone__name" data-aos="zoom-in" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true"/>
+            <div className="capstone__responsive-container">
+              <div className="capstone__equation">
+                <img className="capstone__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="zoom-in" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
+                <span className="capstone__multiply" data-aos="zoom-in" data-aos-delay="750" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">X</span>
+                <img src={nameLogo} alt="Name Logo" className="capstone__name" data-aos="zoom-in" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true"/>
+              </div>
+              <a href="https://visual-eyes-pi.vercel.app/" target="blank" data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="1200" data-aos-once="true">
+              <div className="capstone__visualeyes-container">
+                <VisualEye />
+                <img src={visualEyesLogo} alt="VisualEyes Logo" className="capstone__visualeyes-logo"/>
             </div>
-            <div className="capstone__visualeyes-container" data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1200" data-aos-once="true">
-          <VisualEye />
-          <img src={visualEyesLogo} alt="VisualEyes Logo" className="capstone__visualeyes-logo"/>
-          </div>
-            <p className="capstone__information">An interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
-            <a href="https://visual-eyes-pi.vercel.app/">Play</a>
-            <a href="https://github.com/karst-larsen/VisualEyes">GitHub</a>
-            <p className="capstone__information">I’ll be adding more applications of interest over time, so be sure to check back. </p>
+            </a>
+              <p className="capstone__information" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">An interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
+              <div className="capstone__links" data-aos="fade-up" data-aos-delay="1750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="50">
+                <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="capstone__link">Play</a>
+                <a href="https://github.com/karst-larsen/VisualEyes" target="blank" className="capstone__link">GitHub</a>
+              </div>
+            </div>
           </section>
-      </div>
+          <section className="contact">
+            <h2 className="contact__cta">Let's Connect.</h2>
+            
+          </section>
+          </div>
     );
   }
 }
