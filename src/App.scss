@@ -98,13 +98,58 @@ html {
   color: #EEEEF0;
 }
 
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 1.5rem;
+  z-index: 998;
+}
+
+.bm-burger-bars {
+  background: #EEEEF0;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.bm-cross-button {
+  height: 2rem;
+  width: 2rem;
+  z-index: 1600;
+  margin-top: -1.5rem;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: #303030;
+  z-index: 10;
+  padding: 1rem 1.5rem 0;
+  font-size: 1.15em;
+  position: relative;
+  top: -2rem;
+}
+
+.bm-item-list {
+  width: 50%;
+}
+
+.bm-overlay {
+  display: none;
+}
+
 .header {
   display: flex;
+  position: fixed;
   width: 100%;
   min-width: 16rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  z-index: 1500;
 
   @media screen and (min-width: 768px) {
     padding: 1rem 4rem;
@@ -113,17 +158,24 @@ html {
   &__name {
     display: inline-block;
   }
-
+  
   &__right-header {
     width: 16rem;
   }
-
+  
   &__logo {
+    width: 17rem;
+    max-width: 12rem;
+    position: relative;
+    right: 5rem;
     font-size: 1.25rem;
     text-align: right;
     font-weight: 800;
     line-height: 80%;
     letter-spacing: -1px;
+    background-color: rgba(48, 48, 48, 0.4);
+    border-radius: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
   }
   
@@ -149,10 +201,9 @@ html {
 
 .personal {
   display: flex;
-  min-height: calc(100vh - 70px);
+  min-height: 100vh;
   padding: 0 2rem;
   justify-content: flex-start;
-  // text-align: center;
   margin: 0 auto;
   background-color: #253259;
   color: #EEEEF0;
@@ -564,6 +615,7 @@ html {
   text-align: left;
   background-color: white;
   min-height: 100vh;
+  min-width: 20rem;
   border: 10px solid #303030;
   border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
   margin: 0 auto;
@@ -585,24 +637,36 @@ html {
   }
 
   &__brainstation {
-    height: 6rem;
+    height: 4rem;
+
+    @media screen and (min-width: 768px) {
+      height: 6rem;
+    }
   }
 
   &__name {
-    width: 8rem;
+    width: 5rem;
+
+    @media screen and (min-width: 768px) {
+      width: 8rem;
+    }
   }
 
   &__equation {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 2rem 0;
+    margin: 4rem 0 2rem 0;
   }
   
   &__multiply, &__equals {
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: 0 1rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   &__visualeyes-container {
@@ -613,9 +677,10 @@ html {
     border: 1px solid #EEEEF0;
     border-radius: 2rem;
     box-shadow: 0px 4px 0.5rem #303030;
-    padding: 1rem 5rem;
+    padding: 1rem 1rem;
     position: relative;
     top: 0;
+    margin-bottom: 2rem;
     transition: all 0.2s ease-in-out;
 
     @media screen and (min-width: 768px) {
@@ -637,10 +702,16 @@ html {
   }
 
   &__information {
-    font-size: 18px;
+    font-size: 1rem;
     text-align: center;
     font-weight: bold;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
+    max-width: 23.125rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.125rem;
+      max-width: 100%;
+    }
   }
 
   &__links {

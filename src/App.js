@@ -36,6 +36,7 @@ import nameLogo from './assets/icons/nameLogo.svg'
 import visualEyesLogo from './assets/icons/VisualEyesLogo.svg'
 
 
+
 class App extends Component {
   state = {
     greetingsContainer: ['Hello', 'Bonjour', 'Hola', 'Olá', 'Hej', 'Ciao', 'こんにちは', 'Hei', 'Χαίρε', 'Hallo', 'Zdravo', 'مرحبا', '안녕', 'Cześć', 'Ahoj', '你好', 'Sveiki', 'Chào bạn'],
@@ -178,7 +179,8 @@ class App extends Component {
             </div>
             </a>
               <p className="capstone__information" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">An interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
-              <div className="capstone__links" data-aos="fade-up" data-aos-delay="1750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="50">
+              <p className="capstone__information" data-aos="fade-up" data-aos-delay="1750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true"> Built with ReactJS and ToneJS.</p>
+              <div className="capstone__links" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="50">
                 <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="capstone__link">Play</a>
                 <a href="https://github.com/karst-larsen/VisualEyes" target="blank" className="capstone__link">GitHub</a>
               </div>
