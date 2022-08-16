@@ -8,9 +8,11 @@ function NavBar() {
     return (
     <div className="header">
         <div className="header__logo">
-            <span className="header__name" data-aos="fade-right" data-aos-offset="5" data-aos-duration="1000" >Karsten</span>
-            <br />
-            <span className="header__name" data-aos="fade-right" data-aos-delay="150" data-aos-offset="5" data-aos-duration="1000">Larsen</span>
+            <a href="#home" className="header__logo-link">
+                <span className="header__name" data-aos="fade-right" data-aos-offset="5" data-aos-duration="1000" >Karsten</span>
+                <br />
+                <span className="header__name" data-aos="fade-right" data-aos-delay="150" data-aos-offset="5" data-aos-duration="1000">Larsen</span>
+            </a>
         </div>
         <div className="header__right-header">
             <Menu right z-index="1600">
@@ -20,9 +22,6 @@ function NavBar() {
                 <a href="#capstone" className="header__nav-link">Capstone</a>
                 <a href="#contact" className="header__nav-link">Contact</a>
             </Menu>
-            {/* <ul className="header__nav">
-                
-            </ul> */}
         </div>
     </div>
     );
