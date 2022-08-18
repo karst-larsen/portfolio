@@ -1,6 +1,8 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { slide as Menu } from 'react-burger-menu'
+import { Link } from 'react-router-dom'
+import HomePage from '../../pages/HomePage/HomePage';
 
 function NavBar() {
     AOS.init();
@@ -8,18 +10,17 @@ function NavBar() {
     return (
     <div className="header">
         <div className="header__logo">
-            <a href="#home" className="header__logo-link">
+            <Link to="/" className="header__logo-link">
                 <span className="header__name" data-aos="fade-right" data-aos-offset="5" data-aos-duration="1000" >Karsten</span>
                 <br />
                 <span className="header__name" data-aos="fade-right" data-aos-delay="150" data-aos-offset="5" data-aos-duration="1000">Larsen</span>
-            </a>
+            </Link>
         </div>
         <div className="header__right-header">
             <Menu right z-index="1600">
-            <a href="#home" className="header__nav-link">Home</a>
-                <a href="#about" className="header__nav-link">About</a>
-                <a href="#skills" className="header__nav-link">Skills</a>
-                <a href="#capstone" className="header__nav-link">Capstone</a>
+            <Link to="/" className="header__nav-link">Home</Link>
+                <Link to="/about" className="header__nav-link">About</Link>
+                <Link to="/visual-eyes" className="header__nav-link">Visual Eyes</Link>
                 <a href="#contact" className="header__nav-link">Contact</a>
             </Menu>
         </div>

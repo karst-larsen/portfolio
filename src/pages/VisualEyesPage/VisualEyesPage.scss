@@ -1,0 +1,182 @@
+.capstone {
+    &__header {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    &__vs-information {
+        font-weight: normal;
+        font-size: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__vs-responsive-container {
+        margin-top: 5rem;
+        max-width: 59.375rem;
+    }
+
+    &__sub-header {
+        font-size: 1.5rem;
+        margin: 0;
+        align-self: flex-start;
+
+        @media screen and (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__responsive-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &--bold-text {
+        font-weight: bold;
+    }
+
+    &__colour-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 30rem;
+        // border: 1px solid black;
+
+        @media screen and (min-width: 768px) {
+        height: 20rem;
+
+        }
+    }
+
+    &__colour-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 42%;
+        margin: 1.2rem 0.25rem;
+        // border: 1px solid black;
+
+        @media screen and (min-width: 768px) {
+            width: 25%;
+        }
+    }
+
+    &__colour {
+        width: 80%;
+        height: 2rem;
+        background-color: grey;
+
+        &--C {
+            background-color: hsl(30, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(30, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--Csharp {
+            background-color: hsl(60, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(60, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--D {
+            background-color: hsl(90, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(90, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--Dsharp {
+            background-color: hsl(120, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(120, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--E {
+            background-color: hsl(150, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(150, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--F {
+            background-color: hsl(180, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(180, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--Fsharp {
+            background-color: hsl(210, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(210, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--G {
+            background-color: hsl(240, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(240, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--Gsharp {
+            background-color: hsl(270, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(270, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--A {
+            background-color: hsl(300, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(300, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--Asharp {
+            background-color: hsl(330, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(330, 100%, 50%);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &--B {
+            background-color: hsl(360, 100%, 50%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 0px 0px 4px 2px hsl(360, 100%, 50%);    
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+
+    &__colour-note {
+        font-weight: bold;
+    }
+}
