@@ -1,7 +1,40 @@
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) scale(1.1, 1.1)
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1, 1.1)
+    }
+    100% {
+      transform: rotate(360deg) scale(1.1, 1.1)
+    }
+  }
+
+  @keyframes pulse {
+      0% {
+          box-shadow: 0 0 
+      }
+  }
+
 .capstone {
+
+    &__vs {
+        width: 100%;
+        padding: 0;
+
+        @media screen and (min-width: 768px){
+            padding: 0;
+        }    
+    }
+
     &__header {
+        text-align: center;
         font-size: 2.5rem;
         font-weight: bold;
+
+        @media screen and (min-width: 768px) {
+            font-size: 3rem;
+        }
     }
 
     &__vs-information {
@@ -15,17 +48,28 @@
 
     &__vs-responsive-container {
         margin-top: 5rem;
-        max-width: 59.375rem;
     }
 
     &__sub-header {
-        font-size: 1.5rem;
-        margin: 0;
+        font-size: 2rem;
+        margin: 2rem 0 0 0;
         align-self: flex-start;
 
         @media screen and (min-width: 768px) {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
+    }
+
+    &__vs-visualeyes-logo {
+        width: 18rem;
+
+        @media screen and (min-width: 768px) {
+            width: 30rem;
+        }
+    }
+
+    &__vs-section {
+        background-color: blue;
     }
 
     &__responsive-box {
@@ -50,11 +94,11 @@
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
-        height: 30rem;
+        height: 28rem;
         // border: 1px solid black;
 
         @media screen and (min-width: 768px) {
-        height: 20rem;
+        height: 18rem;
 
         }
     }
@@ -65,7 +109,6 @@
         align-items: center;
         width: 42%;
         margin: 1.2rem 0.25rem;
-        // border: 1px solid black;
 
         @media screen and (min-width: 768px) {
             width: 25%;
@@ -75,7 +118,7 @@
     &__colour {
         width: 80%;
         height: 2rem;
-        background-color: grey;
+        cursor: pointer;
 
         &--C {
             background-color: hsl(30, 100%, 50%);
@@ -176,7 +219,87 @@
         }
     }
 
+    &__logo-link {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__page-link {
+        color: inherit;
+    }
+
     &__colour-note {
         font-weight: bold;
+    }
+
+    &__icons {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 8rem;
+        margin: 0 2rem;
+    }
+
+    &__improvements {
+        padding: 0;
+        margin: 0;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__improvement {
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    &__improvements-item {
+        padding-left: 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 2rem;
+        }
+    }
+
+    &__improvement-item {
+        padding-top: 1rem;
+        font-weight: normal;
+    }
+
+    &__vs-container {
+        width: 100%;
+        padding: 4rem 2rem 2rem 2rem;
+        min-height: 100vh;
+        max-width: 59.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__audiovisuality {
+        background-color: #EEEEF0;
+        color: #253259;
+    }
+
+    &__how-it-works {
+        // width: 100%;
+        background-color: #253259;
+        color: #EEEEF0;
+        // padding: 2rem;
+    }
+
+    &__next {
+        // padding: 2rem;
+        background-color: #F2B33D;
+        color: #253259;
+    }
+
+    &__colour-pairings {
+        background-color: #253259;
+        color: #EEEEF0;
     }
 }

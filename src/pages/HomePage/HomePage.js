@@ -30,7 +30,7 @@ import expressIcon from '../../assets/icons/express.svg'
 import brainstationIcon from '../../assets/icons/brainstation.svg'
 import brainstationIconBlue from '../../assets/icons/BrainStationLogoBlue.svg'
 import nameLogo from '../../assets/icons/nameLogo.svg'
-import visualEyesLogo from '../../assets/icons/VisualEyesLogo.svg'
+import visualEyesLogo from '../../assets/icons/visualeyesspectrum.svg'
 import { Link } from 'react-router-dom'
 
 const HomePage = (props) => {
@@ -40,7 +40,7 @@ const HomePage = (props) => {
           <div className="personal__responsive-container">
             <h1 className="personal__header">
               <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="750">Hey, <br />I'm Karsten Larsen
-                <span className="personal__hand" data-aos="fade-up" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out">👋🏽</span>
+                <span className="personal__hand" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out">👋🏽</span>
               </span>
                 <br />
                 <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" />
@@ -55,21 +55,21 @@ const HomePage = (props) => {
         <section className="about" id="about">
           <div className="about__responsive-container">
             <div className="about__text-container">
-              <h1 className="about__header" data-aos="fade-left" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
-              <p className="about__information" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
+              <h1 className="about__header" data-aos="fade-left" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
+              <p className="about__information" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="750" data-aos-once="true" >I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
             </div>
             <div className="about__text-container">  
               <div className="about__brainstation-graduate">
-                <img className="about__brainstation" src={brainstationIconBlue} alt="Brainstation Logo" data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
-                <h2 className="about__graduate-label" data-aos="fade-right" data-aos-delay="750" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">BrainStation Graduate</h2>
+                <img className="about__brainstation" src={brainstationIconBlue} alt="Brainstation Logo" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
+                <h2 className="about__graduate-label" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">BrainStation Graduate</h2>
               </div>
-              <p className="about__information" data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="750" data-aos-once="true">Now, as a graduate from <a href="https://brainstation.io/course/online/remote-web-development-bootcamp" className="about__link" target="blank">BrainStation's Web Development Bootcamp</a>, I can build websites and web applications from client to server, supplemented by years of relative editing practice under my belt.</p>
+              <p className="about__information" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="750" data-aos-once="true">Now, as a graduate from <a href="https://brainstation.io/course/online/remote-web-development-bootcamp" className="about__link" target="blank">BrainStation's Web Development Bootcamp</a>, I can build websites and web applications from client to server, supplemented by years of relative editing practice under my belt.</p>
             </div>
             <div className="about__text-container">  
-              <p className="about__competencies" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
+              <p className="about__competencies" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
               <div className="about__links">
-                <a href="#skills" className="about__link"><p className="about__competencies--link" data-aos="fade-up" data-aos-delay="1750" data-aos-duration="750" data-aos-once="true" data-aos-offset="-20">Here's what I know so far </p></a>
-                <a href="#skills" className="about__hand" data-aos="fade-up" data-aos-delay="1750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-offset="50">👇🏽</a>
+                <a href="#skills" className="about__link"><p className="about__competencies--link" data-aos="fade-up" data-aos-delay="1250" data-aos-duration="750" data-aos-once="true" data-aos-offset="-20">Here's what I know so far </p></a>
+                <a href="#skills" className="about__hand" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-offset="50">👇🏽</a>
               </div>
             </div>
           </div>
@@ -77,8 +77,8 @@ const HomePage = (props) => {
         <section className="creative" id="skills">
             <div className="creative__technologies">
               <div className="creative__tech-category">
-                <h2 className="creative__label" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</h2>
-                <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
+                <h2 className="creative__label" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</h2>
+                <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
                   <div className="creative__icon-box">
                     <span className="creative__icon-label">HTML</span>
                     <img className="creative__icon" src={htmlIcon} alt="HTML Logo" />
@@ -118,8 +118,8 @@ const HomePage = (props) => {
                 </div>
               </div>
               <div className="creative__tech-category">
-                <h2 className="creative__label" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Production and Design</h2>
-                <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">
+                <h2 className="creative__label" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">Production and Design</h2>
+                <div className="creative__technology-group" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-50">
                   <div className="creative__icon-box">
                     <span className="creative__icon-label">Photoshop</span>
                     <img className="creative__icon" src={photoShopIcon} alt="Photoshop Logo" />
