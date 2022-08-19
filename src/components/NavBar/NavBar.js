@@ -1,17 +1,28 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { slide as Menu } from 'react-burger-menu'
+import { Link } from 'react-router-dom'
+import HomePage from '../../pages/HomePage/HomePage';
+
 function NavBar() {
+    AOS.init();
+
     return (
     <div className="header">
         <div className="header__logo">
-            <span>Karsten</span>
-            <br />
-            <span>Larsen</span>
+            <Link to="/" className="header__logo-link">
+                <span className="header__name" data-aos="fade-right" data-aos-offset="5" data-aos-duration="1000" >Karsten</span>
+                <br />
+                <span className="header__name" data-aos="fade-right" data-aos-delay="150" data-aos-offset="5" data-aos-duration="1000">Larsen</span>
+            </Link>
         </div>
         <div className="header__right-header">
-            <ul className="header__nav">
-                <li className="header__nav-link">Home</li>
-                <li className="header__nav-link">Projects</li>
-                <li className="header__nav-link">Contact</li>
-            </ul>
+            <Menu right z-index="1600">
+            <Link to="/" className="header__nav-link">Home</Link>
+                <Link to="/about" className="header__nav-link">About</Link>
+                <Link to="/visual-eyes" className="header__nav-link">Visual Eyes</Link>
+                <a href="#contact" className="header__nav-link">Contact</a>
+            </Menu>
         </div>
     </div>
     );
