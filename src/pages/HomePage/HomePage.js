@@ -1,13 +1,6 @@
-import { Component } from 'react'
 import "animate.css/animate.min.css";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../App.scss';
-import NavBar from '../../components/NavBar/NavBar';
-import myIcon from '../../assets/images/BSTN-May-2022-Toront-CT-Headshot-40 1.svg'
-import linkedIn from '../../assets/icons/174857 1.svg'
-import gitHub from '../../assets/icons/25231 1.svg'
-import emailIcon from '../../assets/icons/XMLID_1_.svg'
 import VisualEye from '../../components/NavBar/VisualEye/VisualEye';
 import photoShopIcon from '../../assets/icons/photoshop.svg'
 import illustratorIcon from '../../assets/icons/illustrator.svg'
@@ -39,14 +32,14 @@ const HomePage = (props) => {
         <section className="personal">
           <div className="personal__responsive-container">
             <h1 className="personal__header">
-              <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="750">Hey, <br />I'm Karsten Larsen
-                <span className="personal__hand" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out">👋🏽</span>
+              <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">Hey, <br />I'm Karsten Larsen
+                <span className="personal__hand" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">👋🏽</span>
               </span>
-                <br />
-                <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" />
-              <span className="personal__header-subline personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out">I'm a Junior Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
+                {/* <br /> */}
+                <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" data-aos-once="true" />
+              <span className="personal__header-subline personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">I'm a Junior Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
             </h1>
-            <div className="personal__links" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out">
+            <div className="personal__links" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
                 <Link to="/about" className="personal__link">About Me</Link>
                 <Link to="/visual-eyes" className="personal__link">Projects</Link>
             </div>

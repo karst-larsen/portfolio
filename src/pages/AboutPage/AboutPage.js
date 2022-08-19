@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
+import personalIcon from '../../assets/images/BSTN-May-2022-Toront-CT-Headshot-40 1.svg'
+import './AboutPage.scss'
+
 
 function AboutPage(props) {
     return (
-        <div>
+        <div className="about-me">
             <h1>About Page</h1>
+            <div className="about-me__image-box" data-aos="flip-left" data-aos-duration="1000" >
+            <img src={personalIcon} alt="Personal Icon" className="about-me__image" />
+            </div>
             {/* <section className="contact" id="contact">
           <div className="contact__responsive-container">
             <div className="contact__text-box">

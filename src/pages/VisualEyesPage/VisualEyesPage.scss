@@ -21,10 +21,8 @@
     &__vs {
         width: 100%;
         padding: 0;
-
-        @media screen and (min-width: 768px){
-            padding: 0;
-        }    
+        border: 10px solid #303030;
+        border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;   
     }
 
     &__header {
@@ -69,7 +67,9 @@
     }
 
     &__vs-section {
-        background-color: blue;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     &__responsive-box {
@@ -270,36 +270,35 @@
         font-weight: normal;
     }
 
-    &__vs-container {
+    &__container {
         width: 100%;
-        padding: 4rem 2rem 2rem 2rem;
-        min-height: 100vh;
-        max-width: 59.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        min-height: 100vh;
+        max-width: 59.375rem;
+        padding: 4rem 2rem 2rem 2rem;
     }
-
-    &__audiovisuality {
+    
+    &__container--audiovisuality {
         background-color: #EEEEF0;
         color: #253259;
     }
-
-    &__how-it-works {
-        // width: 100%;
+    
+    &__container--how-it-works {
         background-color: #253259;
         color: #EEEEF0;
-        // padding: 2rem;
     }
 
-    &__next {
-        // padding: 2rem;
+    &__container--next {
         background-color: #F2B33D;
         color: #253259;
-    }
-
-    &__colour-pairings {
-        background-color: #253259;
-        color: #EEEEF0;
     }
 }
