@@ -20,7 +20,7 @@ function NavBar() {
             <Menu right z-index="1600">
             <Link to="/" className="header__nav-link">Home</Link>
                 <Link to="/about" className="header__nav-link">About</Link>
-                <Link to="/visual-eyes" className="header__nav-link">Visual Eyes</Link>
+                <Link to="/visual-eyes" className="header__nav-link">VisualEyes</Link>
                 <a href="#contact" className="header__nav-link">Contact</a>
             </Menu>
         </div>

@@ -6,9 +6,12 @@ import './AboutPage.scss'
 function AboutPage(props) {
     return (
         <div className="about-me">
-            <h1>About Page</h1>
             <div className="about-me__image-box" data-aos="flip-left" data-aos-duration="1000" >
             <img src={personalIcon} alt="Personal Icon" className="about-me__image" />
+            <h1 className="about-me__header">About Me</h1>
+            </div>
+            <div className="about-me__information-box">
+                <p className="about-me__information">I come from a communications background</p>
             </div>
             {/* <section className="contact" id="contact">
           <div className="contact__responsive-container">

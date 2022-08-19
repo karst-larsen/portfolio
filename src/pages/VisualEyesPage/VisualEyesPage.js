@@ -26,8 +26,8 @@ const VisualEyesPage = (props) => {
         {/* </section> */}
             <div className="capstone__container capstone__container--how-it-works">
                 <div className="capstone__wrapper">
-                <h2 className="capstone__sub-header" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" >How It Works</h2>
-                <div className="capstone__icons" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out">
+                <h2 className="capstone__sub-header" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" >How It Works</h2>
+                <div className="capstone__icons" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
                     <img className="capstone__icon" src={reactIcon} alt="React Icon" />
                     <img className="capstone__icon" src={toneJSIcon} alt="ToneJS icon" />
                 </div>

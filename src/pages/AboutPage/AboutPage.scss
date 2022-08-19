@@ -1,6 +1,7 @@
 .about-me {
     width: 100%;
     min-width: 20rem;
+    color: #253259;
 
 
     &__image-box {
@@ -11,5 +12,9 @@
 
     &__image {
         width: 15rem;
+    }
+
+    &__header {
+        border-bottom: 5px solid #253259;
     }
 }

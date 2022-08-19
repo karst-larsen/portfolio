@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Inter";
+  src: local(Inter),
+  url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0);
@@ -70,12 +77,11 @@
 
 *, body {
   box-sizing: border-box;
+  font-family: 'Inter';
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-// html {
-//   scroll-behavior: smooth;
-//   overflow-x: hidden;
-// }
 
 .App {
   margin: 0 auto;
@@ -98,8 +104,8 @@
   position: fixed;
   width: 36px;
   height: 30px;
-  right: 1rem;
-  top: 1.5rem;
+  right: 2rem;
+  top: 1.75rem;
   z-index: 998;
 
   @media screen and (min-width: 768px) {
@@ -130,7 +136,7 @@
   padding: 1rem 1.5rem 0;
   font-size: 1.15em;
   position: relative;
-  top: -2.5rem;
+  top: -2.7rem;
 }
 
 .bm-item-list {
@@ -168,11 +174,11 @@
     max-width: 10rem;
     position: relative;
     right: 5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: right;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 80%;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     background-color: rgba(48, 48, 48, 0.4);
     border-radius: 1rem;
     padding: 0.5rem;
@@ -223,7 +229,7 @@
   animation: expand 1s ease-in forwards;
   animation-delay: 0.5s;
   width: 0%;
-  max-width: 450px;
+  max-width: 410px;
   border: 1px solid #F2B33D;
   margin: 0 100% 0 0;
 
@@ -253,7 +259,7 @@
   &__hand {
     display: inline-block;
     margin-left: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     animation: wave 5s ease-in-out infinite;
     animation-delay: 1000ms;
     transform-origin: 70% 70%;
@@ -273,7 +279,6 @@
     font-weight: normal;
     text-align: left;
     position: relative;
-    top: -1rem;
 
     @media screen and (min-width: 768px) {
     width: 100%;
@@ -383,15 +388,21 @@
   &__links {
     display: flex;
     justify-content: center;
-    // margin-right: 5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 20%;
+    }
   }
 
   &__position {
     font-weight: 400;
     font-size: 1rem;
-    width: 70%;
+    width: 65%;
 
     @media screen and (min-width: 768px) {
+      width: 75%;
       font-size: 1.5rem;
     }
   }
@@ -399,7 +410,7 @@
   &__link {
     color: white;
     text-decoration: none;
-    width: 7rem;
+    width: 100%;
     height: 3rem;
     display: flex;
     align-items: center;
@@ -408,7 +419,8 @@
     color: #253259;
     font-weight: bold;
     border-radius: 1rem;
-    margin: 0 1rem;
+    margin: 1rem;
+
 
     &:hover {
       background-color: #EC9F10;
@@ -775,6 +787,7 @@
     border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
     box-shadow: 0px 4px 0.5rem #303030;
     padding: 1rem 1rem;
+    margin: 1rem 0;
     position: relative;
     top: 0;
     transition: all 0.2s ease-in-out;
