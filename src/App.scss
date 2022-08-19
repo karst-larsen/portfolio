@@ -74,6 +74,7 @@
 
 // html {
 //   scroll-behavior: smooth;
+//   overflow-x: hidden;
 // }
 
 .App {
@@ -254,7 +255,7 @@
     margin-left: 1rem;
     font-size: 3rem;
     animation: wave 5s ease-in-out infinite;
-    animation-delay: 1500ms;
+    animation-delay: 1000ms;
     transform-origin: 70% 70%;
     user-select: none;
     -webkit-user-drag: none;
@@ -637,6 +638,7 @@
 
   &__text-container {
     border-radius: 1rem;
+    margin: 1rem 0;
     // padding: 1rem;
   }
 
@@ -709,8 +711,9 @@
   text-align: left;
   background-color: white;
   min-height: 100vh;
-  min-width: 20rem;
-  border: 10px solid #303030;
+  min-width: 16rem;
+  border-style: solid;
+  border-width: 10px;
   border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
   margin: 0 auto;
 
@@ -774,7 +777,6 @@
     padding: 1rem 1rem;
     position: relative;
     top: 0;
-    margin-bottom: 2rem;
     transition: all 0.2s ease-in-out;
 
     @media screen and (max-width: 350px) {
@@ -804,7 +806,7 @@
     font-size: 1rem;
     text-align: center;
     font-weight: bold;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0;
     max-width: 23.125rem;
 
     @media screen and (min-width: 768px) {
