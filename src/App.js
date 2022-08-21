@@ -5,7 +5,6 @@ import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import VisualEyesPage from './pages/VisualEyesPage/VisualEyesPage';
 import NavBar from './components/NavBar/NavBar';
-import AboutPage from './pages/AboutPage/AboutPage';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
@@ -20,7 +19,7 @@ const App = () => {
         <ScrollToTop>
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/about" component={AboutPage} />
+            {/* <Route path="/about" component={AboutPage} /> */}
             <Route path="/visual-eyes" component={VisualEyesPage} />
           </Switch>
         </ScrollToTop>

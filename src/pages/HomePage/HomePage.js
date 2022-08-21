@@ -25,6 +25,8 @@ import brainstationIconBlue from '../../assets/icons/BrainStationLogoBlue.svg'
 import nameLogo from '../../assets/icons/nameLogo.svg'
 import visualEyesLogo from '../../assets/icons/visualeyesspectrum.svg'
 import { Link } from 'react-router-dom'
+import bmoImage from '../../assets/images/bmo-image.png'
+import bmoLogo from '../../assets/images/bmo-logo.png'
 import resume from '../../assets/files/Karsten_ONeill-Larsen_Resume.pdf'
 import personalIcon from '../../assets/images/BSTN-May-2022-Toront-CT-Headshot-40 1.svg'
 
@@ -33,44 +35,57 @@ const HomePage = (props) => {
         <div className="App">
         <section className="personal">
           <div className="personal__responsive-container">
-            <img data-aos="zoom-in" data-aos-duration="750" src={personalIcon} alt="Personal Icon" className="personal__image" />
-            <h1 className="personal__header">
-              <span className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-once="true">Hey, <br />I'm Karsten Larsen
-                <span className="personal__hand" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">👋🏽</span>
-              </span>
-                <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" data-aos-once="true" />
-              <span className="personal__header-subline personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">I'm a Junior Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
-            </h1>
-            <div className="personal__links" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
-                <Link to="/about" className="personal__link">About Me</Link>
-                <Link to="/visual-eyes" className="personal__link">Projects</Link>
+              <div className="personal__image-text">
+                    <img data-aos="zoom-in" data-aos-duration="750" src={personalIcon} alt="Personal Icon" className="personal__image" />
+                    <div className="personal__header">
+                    <h1 className="personal__header-line personal--bold" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-once="true">Hey, <br />I'm Karsten Larsen
+                        <span className="personal__hand" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">👋🏽</span>
+                        <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" data-aos-once="true" />
+                    </h1>
+                    <span className="personal__header-subline personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">I'm a Junior Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
+                    </div>
+              </div>
+            {/* <div className="personal__links" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">
+                <a href="#about" className="personal__link">About Me</a>
+                <a href="#capstone" className="personal__link">Projects</a>
                 <a href={resume} className="personal__link" target="blank">Resume</a>
-            </div>
+            </div> */}
           </div>
         </section>
         <section className="about" id="about">
           <div className="about__responsive-container">
             <div className="about__text-container">
-              <h1 className="about__header" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h1>
-              <p className="about__information" data-aos="fade-up" data-aos-duration="750" data-aos-once="true" data-aos-easing="ease-in-out">I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. </p>
+              <h2 className="about__header" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Creative Development</h2>
+              <p className="about__information" data-aos="fade-up" data-aos-duration="750" data-aos-once="true" data-aos-easing="ease-in-out">I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. I picked up JavaScript out of curiosity during the pandemic and felt a huge sense of reward from finishing coding challenges and improving my understanding of the language.</p>
             </div>
             <div className="about__text-container">  
               <div className="about__brainstation-graduate">
                 <img className="about__brainstation" src={brainstationIconBlue} alt="Brainstation Logo" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
                 <h2 className="about__graduate-label" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">BrainStation Graduate</h2>
               </div>
-              <p className="about__information" data-aos="fade-right" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Now, as a graduate from <a href="https://brainstation.io/course/online/remote-web-development-bootcamp" className="about__link" target="blank">BrainStation's Web Development Bootcamp</a>, I can build websites and web applications from client to server, supplemented by years of relative editing practice under my belt.</p>
+              <p className="about__information" data-aos="fade-right" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">After self-teaching web development for over a year, I consolidated and expanded my learning through <a href="https://brainstation.io/course/online/remote-web-development-bootcamp" className="about__link" target="blank">BrainStation's Web Development Bootcamp</a>. Now, as a graduate from the program, I can build websites and web applications from client to server, supplemented by years of relative editing practice under my belt.</p>
             </div>
-            <div className="about__text-container">  
+            {/* <div className="about__text-container">  
               <p className="about__competencies" data-aos="zoom-in" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
               <div className="about__links" data-aos="zoom-in" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="10">
                 <a href="#skills" className="about__link"><p className="about__competencies--link">Here's what I know so far </p></a>
                 <a href="#skills" className="about__hand">👇🏽</a>
               </div>
+            </div> */}
+            <div className="about__text-container">
+                <h2 className="about__header">Next Steps</h2>
+                <p className="about__information">I'm currently taking courses on Scrimba to continue professional development, creating application concepts to add to my portfolio, and actively seeking developer roles!</p>
             </div>
           </div>
         </section>
         <section className="creative" id="skills">
+        {/* <div className="about__text-container">  
+              <p className="about__competencies" data-aos="zoom-in" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">The ability to pick up and utilize new technologies is a crucial skill in today's digital demands as a developer.</p>
+              <div className="about__links" data-aos="zoom-in" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="10">
+                <a href="#skills" className="about__link"><p className="about__competencies--link">Here's what I know so far </p></a>
+                <a href="#skills" className="about__hand">👇🏽</a>
+              </div>
+            </div> */}
             <div className="creative__technologies">
               <div className="creative__tech-category">
                 <h2 className="creative__label" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">Languages and Frameworks</h2>
@@ -156,26 +171,42 @@ const HomePage = (props) => {
               </div>
           </div>
         </section>
-        <section className="capstone" id="capstone">
-          <div className="capstone__responsive-container">
-            <div className="capstone__equation">
-              <img className="capstone__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
-              <span className="capstone__multiply" data-aos="zoom-in" data-aos-delay="250" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">X</span>
-              <img src={nameLogo} alt="Name Logo" className="capstone__name" data-aos="zoom-in" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-once="true"/>
+        <section className="projects" id="projects">
+            <div className="projects__responsive-container">
+            <h2 className="projects__header">Projects</h2>
+            <div className="projects__visualeyes-container">
+                <div className="projects__visualeyes-icon-logo">
+                    <VisualEye />
+                </div>
+                <div className="projects__visualeyes-description-links">
+                    <img src={visualEyesLogo} alt="VisualEyes Logo" className="projects__visualeyes-logo"/>
+                    <p className="projects__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">An interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
+                    <div className="projects__links" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="15">
+                        <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="projects__link">Play</a>
+                        <a href="https://github.com/karst-larsen/VisualEyes" target="blank" className="projects__link">GitHub</a>
+                        <Link to="/visual-eyes" className="projects__link">Learn More</Link>
+                    </div>
+                </div>
             </div>
-            <a href="https://visual-eyes-pi.vercel.app/" target="blank" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="750" data-aos-once="true">
-              <div className="capstone__visualeyes-container">
-                <VisualEye />
-                <img src={visualEyesLogo} alt="VisualEyes Logo" className="capstone__visualeyes-logo"/>
-              </div>
-            </a>
-            <p className="capstone__information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">An interactive music UI that pairs visual effects to user inputs on built-in drum and synth sequencers.</p>
-            <div className="capstone__links" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="15">
-              <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="capstone__link">Play</a>
-              <a href="https://github.com/karst-larsen/VisualEyes" target="blank" className="capstone__link">GitHub</a>
-              <Link to="/visual-eyes" className="capstone__link">Learn More</Link>
+            <div className="projects__bmo-container">
+                <div className="projects__bmo-icon-logo">
+                    <img src={bmoImage} alt="BMO Image" className="projects__bmo-image" />
+
+                </div>
+                <div className="projects__bmo-description-links">
+                    <div className="projects__equation">
+                    <img className="projects__brainstation" src={brainstationIcon} alt="Brainstation Logo" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true" />
+                    <span className="projects__multiply" data-aos="zoom-in" data-aos-delay="250" data-aos-easing="ease-in-out" data-aos-duration="750" data-aos-once="true">X</span>
+                    <img src={bmoLogo} alt="BMO Logo" className="projects__bmo-logo" data-aos="zoom-in" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-once="true"/>
+                    </div>
+                    <p className="projects__information">A hackathon group challenge devised to better the UX for BMO's Newcomers-To-Canada (NTC) page.</p>
+                    <div className="projects__links">
+                        <a href="" className="projects__link" target="blank">Open</a>
+                        <a href="https://github.com/karst-larsen/industry-hackathon-deployed" className="projects__link" target="blank">GitHub</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            </div>
         </section>
       </div>
     );
