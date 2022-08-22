@@ -1,0 +1,93 @@
+.bmo {
+    background-color: #EEEEF0;
+    background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
+    color: #253259;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 2rem 4rem;
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 2rem; 
+        margin: 1rem 0;
+
+        @media screen and (min-width: 768px) {
+        font-size: 3rem;
+        margin: 2rem 0;
+        }
+    }
+
+    &__subheader {
+        text-decoration: underline;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 59rem;
+    }
+
+    &__logo {
+    width: 10rem;
+    position: relative; 
+    top: -0.2rem;
+
+    @media screen and (min-width: 768px) {
+        width: 15rem;
+    }
+    }
+
+    &__equation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5.5rem;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    
+    }
+    
+    &__multiply {
+    color: black;
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 0 1rem;
+
+    @media screen and (min-width: 768px) {
+        font-size: 3rem;
+        }    
+    }  
+
+    &__brainstation {
+        height: 4rem;
+        @media screen and (min-width: 768px) {
+            height: 6rem;
+        }
+    }
+
+    &__information {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        font-weight: bold;
+    }
+}

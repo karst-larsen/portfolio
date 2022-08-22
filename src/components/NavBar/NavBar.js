@@ -1,30 +1,32 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { slide as Menu } from 'react-burger-menu'
-import { Link } from 'react-router-dom'
-import HomePage from '../../pages/HomePage/HomePage';
+import { HashLink as Link } from 'react-router-hash-link'
+import resume from '../../assets/files/Karsten_ONeill-Larsen_Resume.pdf'
 
 function NavBar() {
     AOS.init();
 
     return (
-    <div className="header">
-        <div className="header__logo">
-            <Link to="/" className="header__logo-link">
-                <span className="header__name" data-aos="fade-right" data-aos-offset="5" data-aos-duration="1000" >Karsten</span>
-                <br />
-                <span className="header__name" data-aos="fade-right" data-aos-delay="150" data-aos-offset="5" data-aos-duration="1000">Larsen</span>
-            </Link>
-        </div>
-        <div className="header__right-header">
-            <Menu right z-index="1600">
-            <Link to="/" className="header__nav-link">Home</Link>
-                <Link to="/about" className="header__nav-link">About</Link>
-                <Link to="/visual-eyes" className="header__nav-link">Visual Eyes</Link>
-                <a href="#contact" className="header__nav-link">Contact</a>
-            </Menu>
-        </div>
-    </div>
+        <header className="header" id="home">
+                <div className="header__logo">
+                    <Link to="/#personal" className="header__logo-link">
+                        <span className="header__name" data-aos="fade-right" data-aos-offset="5" data-aos-duration="1000">Karsten</span>
+                        <br />
+                        <span className="header__name" data-aos="fade-right" data-aos-delay="150" data-aos-offset="5" data-aos-duration="1000">Larsen</span>
+                    </Link>
+                </div>
+                <div className="header__right-header">
+                    <Menu right z-index="1600">
+                        <Link to="/" className="header__nav-link">Home</Link>
+                        <Link to="/#about" className="header__nav-link">About</Link>
+                        <Link to="/#skills" className="header__nav-link">Skills</Link>
+                        <Link to="/#projects" className="header__nav-link">Projects</Link>
+                        <Link to="/#contact"  className="header__nav-link">Contact</Link>
+                        <a href={resume} className="header__nav-link" target="blank">Resume</a>
+                    </Menu>
+                </div>
+    </header>
     );
 }
 

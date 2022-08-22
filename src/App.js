@@ -5,8 +5,9 @@ import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import VisualEyesPage from './pages/VisualEyesPage/VisualEyesPage';
 import NavBar from './components/NavBar/NavBar';
-import AboutPage from './pages/AboutPage/AboutPage';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Contact from './components/Contact/Contact';
+import BMOPage from './pages/BMOPage/BMOPage'
 
 
 const App = () => {
@@ -14,30 +15,16 @@ const App = () => {
 
     return (
       <Router>
-        <header className="App-header" id="home">
-          <NavBar />
-        </header>
+        <NavBar />
         <ScrollToTop>
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/about" component={AboutPage} />
             <Route path="/visual-eyes" component={VisualEyesPage} />
+            <Route path="/bmo-hackathon" component={BMOPage} />
           </Switch>
         </ScrollToTop>
-        <section className="contact" id="contact">
-          <div className="contact__responsive-container">
-            <div className="contact__text-box">
-              <h2 className="contact__cta">Let's Connect</h2>
-              <p className="contact__information">I'm looking to learn, grow, and write impactful code with a team of developers.</p>
-            </div>
-            <div className="contact__form">
-              <input type="text" className="contact__text-input" />
-              <input type="email" className="contact__text-input" />
-              <input type="textarea" className="contact__text-input" />
-            </div>
-          </div>
-        </section>
-      </Router>
+        <Contact />
+       </Router>
     );
   }
 
