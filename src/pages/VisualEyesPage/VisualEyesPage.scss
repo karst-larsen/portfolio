@@ -17,7 +17,6 @@
   }
 
 .projects {
-
     &__vs {
         width: 100%;
         padding: 0;
@@ -27,10 +26,11 @@
     }
 
     &__header {
+        color: #253259;
         text-align: center;
         font-size: 2.5rem;
         font-weight: bold;
-        margin-top: 5rem;
+        margin: 5rem 0 3rem 0;
 
         @media screen and (min-width: 768px) {
             font-size: 3rem;
@@ -41,10 +41,9 @@
         font-weight: normal;
         font-size: 1rem;
         margin: 1rem 0;
-        // padding: 0 2rem;
 
         @media screen and (min-width: 768px) {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
     }
 
@@ -54,7 +53,6 @@
 
     &__sub-header {
         font-size: 2rem;
-        margin: 2rem 0 0 0;
         align-self: flex-start;
 
         @media screen and (min-width: 768px) {
@@ -260,6 +258,7 @@
     &__improvement {
         font-weight: bold;
         margin-top: 1rem;
+        list-style: none;
     }
 
     &__improvements-item {
@@ -273,6 +272,7 @@
     &__improvement-item {
         padding-top: 1rem;
         font-weight: normal;
+        font-size: 1rem;
     }
 
     &__container {
@@ -291,7 +291,7 @@
         min-height: 100vh;
         max-width: 59.375rem;
         min-width: 16rem;
-        padding: 4rem 2rem 2rem 2rem;
+        padding: 5rem 2rem 2rem 2rem;
     }
     
     &__container--audiovisuality {

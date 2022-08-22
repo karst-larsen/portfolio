@@ -8,7 +8,5 @@ const ScrollToTop = (props) => {
     }, [location]);
 
     return <>{props.children}</>
-
 }
-
 export default ScrollToTop;

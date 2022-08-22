@@ -11,7 +11,6 @@ import reactIcon from '../../assets/icons/react.svg'
 const VisualEyesPage = (props) => {
     return (
         <div className="projects__vs">
-        {/* <section className="projects__vs-section" id="projects"> */}
             <div className="projects__container projects__container--audiovisuality">
                 <div className="projects__wrapper">
                     <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="projects__logo-link" ><img src={visualEyesLogo} alt="VisualEyes Logo" className="projects__vs-visualeyes-logo" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="zoom-in-out" data-aos-once="true" /></a>
@@ -23,7 +22,6 @@ const VisualEyesPage = (props) => {
                     </div>
                 </div>
             </div>
-        {/* </section> */}
             <div className="projects__container projects__container--how-it-works">
                 <div className="projects__wrapper">
                 <h2 className="projects__sub-header" data-aos="fade-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true" >How It Works</h2>

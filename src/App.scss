@@ -5,6 +5,32 @@
   font-weight: 400;
 }
 
+@keyframes gradient-rotation {
+
+  0% {
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
+  }
+  16% {
+    border-image: conic-gradient(yellow, lime, aqua, blue, magenta, red, yellow) 0.5;
+  }
+  32% {
+    border-image: conic-gradient(lime, aqua, blue, magenta, red, yellow, lime) 0.5;
+  }
+  48% {
+    border-image: conic-gradient(aqua, blue, magenta, red, yellow, lime, aqua) 0.5;
+  }
+  64% {
+    border-image: conic-gradient(blue, magenta, red, yellow, lime, aqua, blue) 0.5;
+  }
+  80% {
+    border-image: conic-gradient(magenta, red, yellow, lime, aqua, blue, magenta) 0.5;
+  }
+  100% {
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
+  }
+
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0);
@@ -75,10 +101,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 *, body {
   box-sizing: border-box;
   font-family: 'Inter';
@@ -96,12 +118,6 @@ html {
 
 .App-logo {
   pointer-events: none;
-}
-
-.App-header {
-  background-color: #253259;
-  display: flex;
-  color: #EEEEF0;
 }
 
 .bm-burger-button {
@@ -299,7 +315,6 @@ html {
     align-items: center;
     width: 100%;
     font-weight: normal;
-    // text-align: center;
     position: relative;
   }
   
@@ -366,7 +381,7 @@ html {
     }
 
     @media screen and (min-width: 1280px) {
-      height: 20rem;
+      height: 16rem;
     }
 
     &--clicked {
@@ -393,11 +408,7 @@ html {
 
   &__information {
     text-align: left;
-    font-size: 0.75rem;
-
-    @media screen and (min-width: 768px) {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
 
     &:last-child {
       margin-bottom: 2rem;
@@ -418,7 +429,7 @@ html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    // margin-top: 2rem;
 
     // @media screen and (min-width: 768px) {
     //   margin-right: 20%;
@@ -478,31 +489,23 @@ html {
   height: 100%;
   min-height: 100vh;
   scroll-snap-align: center;
+  border-bottom: 1px solid #CCC;
   
   @media screen and (min-width: 768px) {
     padding: 0 4rem 2rem 4rem;
   }
   
-  // &__responsive-container {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-around;
-  //   width: 100%;
-  //   height: 100%;
-  //   min-height: 100vh;
-  //   max-width: 100rem;
-  //   margin: 0 auto;
-  // }
-  
   &__header {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #253259;
+    margin: 5rem 0 3rem 0;
     
     @media screen and (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
   }
 
-  
   &__icon-label {
     margin-bottom: 0.5rem;
     opacity: 0;
@@ -537,7 +540,7 @@ html {
     margin-bottom: 2rem;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.375rem;
+      font-size: 1rem;
     }
   }
   
@@ -548,7 +551,6 @@ html {
     justify-content: space-around;
     height: 100%;
     flex-grow: 1;
-    margin-top: 3rem;
   }
 
   &__label {
@@ -560,11 +562,9 @@ html {
     color: #253259;
 
     @media screen and (min-width: 768px) {
-      // width: 50%;
       font-size: 1.5625rem;
     }
   }
-
 
   &__tech-category {
     display: flex;
@@ -583,7 +583,6 @@ html {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
-    // border: 1px solid black;
 
     @media screen and (min-width: 768px) {
       max-height: 18rem;
@@ -607,11 +606,6 @@ html {
       
     }
 
-    // @media screen and (min-width: 768px) {
-    //   height: 5rem;
-    //   width: 5rem;
-    // }
-
     @media screen and (min-width: 1280px) {
       padding: 1rem;
       height: 6rem;
@@ -633,7 +627,7 @@ html {
   text-align: left;
   background-color: #F2B33D;
   color: #253259;
-  min-height: 100vh;
+  min-height: 50vh;
   min-width: 16rem;
   scroll-snap-align: center;
   
@@ -642,28 +636,35 @@ html {
   }
 
   &__header {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
+    margin: 5rem 0 3rem 0;
+  }
+
+  &__label {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
 
     @media screen and (min-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.5625rem;
     }
   }
   
   &__responsive-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 100%;
     max-width: 59.375rem;
     margin: 0 auto;
-    padding-top: 3rem;
-    min-height: 100vh;
+    min-height: 50vh;
   }
 
   &__brainstation-graduate {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 1rem;
 
   }
   &__brainstation {
@@ -681,25 +682,21 @@ html {
 
   &__text-container {
     border-radius: 1rem;
-    margin: 1rem 0;
-    // padding: 1rem;
+    margin: 0 0 2rem 0;
   }
 
   &__information {
-    font-size: 1.2rem;
-    @media screen and (min-width: 768px) {
-      font-size: 1.5rem
-    }
+    font-size: 1rem;
   }
   
   &__graduate-label {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     margin-left: 1.2rem;
     font-weight: bold;
     display: inline-block;
 
     @media screen and (min-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.5625rem;
     }
   }
 
@@ -793,43 +790,37 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 4rem 0 2rem 0;
+    height: 5.5rem;
+    // margin: 4rem 0 2rem 0;
   }
   
   &__multiply, &__equals {
     font-weight: 800;
     font-size: 1.5rem;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
   }
 
   &__visualeyes-container {
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 10px solid #EEEEF0;
+    border: 2rem solid #EEEEF0;
     border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
-    padding: 1rem 1rem;
-    margin: 1rem 0;
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 4rem;
     position: relative;
-    // top: 0;
     width: 100vw;
     transition: border-image 0.2s ease-in-out;
-
-    // @media screen and (max-width: 350px) {
-    //   transform: scale(0.8, 0.8)
-    // }
+    animation: gradient-rotation 10s linear infinite;
+    background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
 
     @media screen and (min-width: 768px) {
+      padding: 1rem;
       flex-direction: row;
     }
 
-    &:hover {
-      // top: -0.5rem;
-      transition: border-image 0.2s ease-in-out;
-      // box-shadow: 0px 1rem 1rem #303030;
-      border-image: conic-gradient(lime, aqua, blue, magenta, red, yellow, lime) 0.5;
-    }
     }
 
   &__visualeyes-logo {
@@ -844,9 +835,15 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-
+    width: calc(100vw - 4rem);
+    background-color: white;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #EEEEF0;
+    
     @media screen and (min-width: 768px) {
+      width: 15rem;
+      box-shadow: 0px 0px 8px #CCC;
+      border-radius: 1rem;
       margin-right: 1rem;
     }
   }
@@ -857,7 +854,6 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 1px solid black;
 
     @media screen and (min-width: 768px) {
       width: 70%;
@@ -867,12 +863,11 @@ html {
   &__information {
     font-size: 1rem;
     text-align: center;
-    font-weight: bold;
     margin: 1rem 0;
-    // max-width: 23.125rem;
+    color: #253259;
+    max-width: 23.125rem;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.125rem;
       max-width: 100%;
     }
   }
@@ -882,28 +877,30 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: calc(100vw - 20px);
-    box-shadow: 0px 4px 0.5rem #303030;
-    padding: 1rem;
+    width: calc(100vw - 4rem);
+    box-shadow: 0px 4px 0.5rem #EEEEF0;
+    padding: 0 1rem 1rem 1rem;
     margin: 1rem;
     background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
     transition: box-shadow 0.2s ease-in-out;
-
-
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #EEEEF0;
+    border: 1px solid #EEEEF0;
+    
+    
     @media screen and (min-width: 768px) {
+      height: 18.75rem;
+      padding: 1rem;
       flex-direction: row;
       align-items: stretch;
-    }
-
-    &:hover {
-      box-shadow: 0px 8px 0.5rem #303030;
-      transition: box-shadow 0.2s ease-in-out;
     }
   }
 
   &__bmo-icon-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 
     @media screen and (min-width: 768px) {
       margin-right: 1rem;
@@ -913,9 +910,11 @@ html {
 
   &__bmo-image {
     object-fit: cover;
-    width: calc(100vw - 20px);
+    width: calc(100vw - 4rem);
     height: 100%;
-    border: 1px solid black;
+    max-height: 16rem;
+
+    // border: 1px solid black;
     
     @media screen and (min-width: 768px) {
       border-radius: 1rem;
@@ -936,7 +935,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 1px solid black;
+    // border: 1px solid black;
 
     @media screen and (min-width: 768px) {
       width: 70%;
@@ -964,7 +963,7 @@ html {
     width: 100%;
     max-width: 18rem;
     height: 3rem;
-    margin:  1rem 0.5rem;
+    margin:  0.5rem;
     border-radius: 2rem;
     font-size: 1rem;
     text-decoration: none;
@@ -989,19 +988,28 @@ html {
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-height: 100vh; 
+  min-height: calc(100vh - 3rem) ; 
   background-color: #253259;
   color: #EEEEF0;
   padding: 0 2rem;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 
   &__responsive-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    border-radius: 1rem;
+    height: 100%;
+
+    // @media screen and (min-width: 768px) {
+    //   flex-direction: row;
+    // }
   }
 
   &__text-box {
@@ -1012,10 +1020,12 @@ html {
   }
 
   &__cta {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin: 5rem 0 2rem 0;
  
     @media screen and (min-width: 768px) {
-      font-size: 4rem;
+      margin-top: 0;
+      font-size: 5rem;
     }
   }
 
@@ -1026,11 +1036,24 @@ html {
   }
 
   &__information {
+    text-align: center;
     font-size: 1rem;
-    
+    margin-bottom: 1rem;
+
     @media screen and (min-width: 768px) {
       font-size: 1.5rem;
     }
+  
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+  }
+
+  &__react {
+    height: 2rem;
+    margin: 0 0.5rem;
   }
 
   &__text-input {
@@ -1038,5 +1061,49 @@ html {
     border-radius: 1rem;
     border: 1px solid #EEEEF0;
     margin: 1rem 0;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    border-top: 1rem solid #253259;
+    height: 100%;
+    // margin-top: 2rem;
+    // background-color: white;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 2rem;
+      border-top: 0;
+      border-left: 1rem solid #253259;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+      transition: all 0.1s ease-in-out;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+
+    background-color: #F2B33D;
+   justify-self: flex-end;
   }
 }
