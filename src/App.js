@@ -7,10 +7,12 @@ import VisualEyesPage from './pages/VisualEyesPage/VisualEyesPage';
 import NavBar from './components/NavBar/NavBar';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Contact from './components/Contact/Contact';
+import BMOPage from './pages/BMOPage/BMOPage'
 
 
 const App = () => {
     AOS.init();
+
     return (
       <Router>
         <NavBar />
@@ -18,6 +20,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/visual-eyes" component={VisualEyesPage} />
+            <Route path="/bmo-hackathon" component={BMOPage} />
           </Switch>
         </ScrollToTop>
         <Contact />

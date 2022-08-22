@@ -1,5 +1,5 @@
-import spiral from '../../../assets/images/Spiral.svg'
-import visualEye from '../../../assets/images/FilteredEyeAndMaskFour.svg'
+import spiral from '../../assets/images/Spiral.svg'
+import visualEye from '../../assets/images/FilteredEyeAndMaskFour.svg'
 import './VisualEye.scss'
 
 function VisualEye() {

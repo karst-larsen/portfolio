@@ -16,24 +16,22 @@
       }
   }
 
-.projects {
-    &__vs {
-        width: 100%;
-        padding: 0;
-        border-style: solid;
-        border-width: 10px;
-        border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1; 
-    }
+.visual-page {
+    width: 100%;
+    padding: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1; 
 
     &__header {
         color: #253259;
         text-align: center;
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin: 5rem 0 3rem 0;
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 1rem 0 3rem 0;
 
         @media screen and (min-width: 768px) {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -43,7 +41,7 @@
         margin: 1rem 0;
 
         @media screen and (min-width: 768px) {
-            font-size: 1rem;
+            font-size: 1.125rem;
         }
     }
 
@@ -52,11 +50,12 @@
     }
 
     &__sub-header {
-        font-size: 2rem;
+        font-size: 1.5rem;
         align-self: flex-start;
+        text-decoration: underline;
 
         @media screen and (min-width: 768px) {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
     }
 
@@ -100,7 +99,6 @@
 
         @media screen and (min-width: 768px) {
         height: 18rem;
-
         }
     }
 
@@ -222,8 +220,9 @@
     }
 
     &__logo-link {
+        align-self: center;
+        width: auto;
         display: flex;
-        justify-content: center;
     }
 
     &__page-link {
@@ -272,7 +271,10 @@
     &__improvement-item {
         padding-top: 1rem;
         font-weight: normal;
-        font-size: 1rem;
+        
+        @media screen and (min-width: 768px) {
+            font-size: 1.125rem;
+        }
     }
 
     &__container {
