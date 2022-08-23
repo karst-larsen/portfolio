@@ -5,15 +5,17 @@ import toneJSIcon from '../../assets/icons/tone.svg'
 import reactIcon from '../../assets/icons/react.svg'
 
 
-const VisualEyesPage = (props) => {
+const VisualEyesPage = () => {
     return (
         <div className="visual-page">
             <div className="visual-page__container visual-page__container--audiovisuality">
                 <div className="visual-page__wrapper">
-                    <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="visual-page__logo-link" ><img src={visualEyesLogo} alt="VisualEyes Logo" className="visual-page__vs-visualeyes-logo" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="zoom-in-out" data-aos-once="true" /></a>
+                    <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="visual-page__logo-link">
+                        <img src={visualEyesLogo} alt="VisualEyes Logo" className="visual-page__vs-visualeyes-logo" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="zoom-in-out" data-aos-once="true" />
+                    </a>
                     <h1 className="visual-page__header" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">BrainStation Capstone Project</h1>
                     <h2 className="visual-page__sub-header" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" >Audiovisualizing Music Production</h2>
-                    <p className="visual-page__vs-information" data-aos="fade-up" data-aos-offset="150" data-aos-delay="500" data-aos-duration="750" data-aos-once="true">Music production has been a hobby of mine for over a decade. When I get into a state of flow during production, I think about how my sounds would interact with a live stage. However, in wanting to conceptualize those thoughts, I realized there's a bit of a learning curve. Audiovisual tools that connect an artist's music to visual feedback has some gray area. I could work on my own animations using Adobe After Effects and synchronize them manually, or learn light control softwares, but I wanted something that reacts directly to the rhythms and sounds that are produced within the application.</p>
+                    <p className="visual-page__vs-information" data-aos="fade-up" data-aos-offset="150" data-aos-delay="500" data-aos-duration="750" data-aos-once="true">Music production has been a hobby of mine for over a decade. When I get into a state of flow during production, I think about how my sounds would interact with a live stage. However, in wanting to conceptualize those thoughts, I realized there can be a significant learning curve. I could work on my own animations using Adobe After Effects and synchronize them manually, or learn light control softwares, but I wanted something that reacts directly to the rhythms and sounds that are produced within the application. I identified that audiovisual tools that connect an artist's music to visual feedback in real time would be extremely beneficial for beginner producers, yet wasn’t widely or easily available.</p>
                     <div className="visual-page__responsive-box">
                     <p className="visual-page__vs-information" data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-offset="50" data-aos-once="true"><span className="visual-page--bold-text">That's where VisualEyes comes in.</span> Rather than having the music and visual production separate, VisualEyes combines the two together with interactive visual elements that respond to steps that the user inputs. Using VisualEyes, the user can see the music that they're making, which in turn creates an audiovisual workflow to music production.</p>
                     </div>
@@ -80,14 +82,14 @@ const VisualEyesPage = (props) => {
                         <div className="visual-page__colour visual-page__colour--B"></div>
                     </div>
                 </div>
-                <p className="visual-page__vs-information">Once the lead and bass synths are filled with a sequence, it can be really fun seeing how the colours interact rhythmically and visually, or even how scales have different colour moods. Think of it as synaesthesia!</p>
+                <p className="visual-page__vs-information">Once the lead and bass synths are filled with a sequence, it can be really fun seeing how the colours interact rhythmically and visually, or even how scales have different colour moods. Think of it as <a href="https://www.healthline.com/health/synesthesia" target="blank" className="visual-page__page-link">digital synesthesia!</a></p>
                 <p className="visual-page__vs-information">Finally, I've programmed ADSR envelopes for the lead and bass synths, which shape how the sound is synthesized. It also affects how the panels display visual information. The attack envelope causes a blurring effect when the envelope is opened, and the release envelope dictates how long the colour is displayed before fading away.</p>
                 </div>
             </div>
                 <div className="visual-page__container visual-page__container--next">
                     <div className="visual-page__wrapper">
                         <h2 className="visual-page__sub-header">What's next?</h2>
-                        <p className="visual-page__vs-information">We had two weeks to complete this assignment at BrainStation, however there's a lot of features that I'd like to implement over time for more functional use as an artist. Here's a few that I think would give the most impact:</p>
+                        <p className="visual-page__vs-information">As outlined by BrainStations capstone project timeline, I completed this project in two weeks, but there is still more I want to do!  The more I play around with it the more ideas I have for features that I'd like to implement for more functional use as an artist. Here's a few that I think would give the most impact:</p>
                         <ul className="visual-page__improvements">
                             <li className="visual-page__improvement">Sequence Swapping, Clearing, Randomization
                                 <ul ul className="visual-page__improvements-item">
@@ -101,7 +103,7 @@ const VisualEyesPage = (props) => {
                             </li>
                             <li className="visual-page__improvement">User Save State, Account Creation
                                 <ul className="visual-page__improvements-item">
-                                    <li className="visual-page__improvement-item">There is currently no save state for visual-page. When the page is uploaded, the application is cleared. Having browser storage or account creation would allow the user to save projects, return to old ideas, and potentially share their work with other users.</li></ul>
+                                    <li className="visual-page__improvement-item">There is currently no save state for VisualEyes. When the page is uploaded, the application is cleared. Having browser storage or account creation would allow the user to save projects, return to old ideas, and potentially share their work with other users.</li></ul>
                             </li>
                         </ul>
                         <p className="visual-page__vs-information">I think the biggest impact with this idea would be DAW integration with VisualEyes as a standalone plugin where the application interacts directly with MIDI inputs. That's currently beyond my scope, but as I continue to grow as a developer I hope to get closer to seeing that vision through to the end!</p>
