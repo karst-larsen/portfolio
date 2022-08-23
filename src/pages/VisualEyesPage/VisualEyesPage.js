@@ -1,5 +1,5 @@
 import React from 'react';
-import visualEyesLogo from '../../assets/icons/visualeyesspectrum.svg'
+import visualEyesLogo from '../../assets/icons/spectrumVisualEyes.png'
 import './VisualEyesPage.scss'
 import toneJSIcon from '../../assets/icons/tone.svg'
 import reactIcon from '../../assets/icons/react.svg'
@@ -82,7 +82,7 @@ const VisualEyesPage = () => {
                         <div className="visual-page__colour visual-page__colour--B"></div>
                     </div>
                 </div>
-                <p className="visual-page__vs-information">Once the lead and bass synths are filled with a sequence, it can be really fun seeing how the colours interact rhythmically and visually, or even how scales have different colour moods. Think of it as <a href="https://www.healthline.com/health/synesthesia" target="blank" className="visual-page__page-link">digital synesthesia!</a></p>
+                <p className="visual-page__vs-information">Once the lead and bass synths are filled with a sequence, it can be really fun seeing how the colours interact rhythmically and visually, or even how scales have different colour moods. Think of it as <a href="https://www.healthline.com/health/synesthesia" target="_blank" rel="noreferrer" className="visual-page__page-link">digital synesthesia!</a></p>
                 <p className="visual-page__vs-information">Finally, I've programmed ADSR envelopes for the lead and bass synths, which shape how the sound is synthesized. It also affects how the panels display visual information. The attack envelope causes a blurring effect when the envelope is opened, and the release envelope dictates how long the colour is displayed before fading away.</p>
                 </div>
             </div>
@@ -107,7 +107,7 @@ const VisualEyesPage = () => {
                             </li>
                         </ul>
                         <p className="visual-page__vs-information">I think the biggest impact with this idea would be DAW integration with VisualEyes as a standalone plugin where the application interacts directly with MIDI inputs. That's currently beyond my scope, but as I continue to grow as a developer I hope to get closer to seeing that vision through to the end!</p>
-                        <p className="visual-page__vs-information">You can check out the <a href="https://visual-eyes-pi.vercel.app/" className="visual-page__page-link" target="blank">live version of VisualEyes</a>, check out the <a href="https://github.com/karst-larsen/VisualEyes" className="visual-page__page-link" target="blank">GitHub repo</a>, or <a href="mailto:karsten.oneill@hotmail.ca" className="visual-page__page-link">send me a message</a> for ways that you think it can be improved.</p>
+                        <p className="visual-page__vs-information">You can check out the <a href="https://visual-eyes-pi.vercel.app/" className="visual-page__page-link" target="_blank" rel="noreferrer" >live version of VisualEyes</a>, check out the <a href="https://github.com/karst-larsen/VisualEyes" className="visual-page__page-link" target="_blank" rel="noreferrer" >GitHub repo</a>, or <a href="mailto:karsten.oneill@hotmail.ca" className="visual-page__page-link">send me a message</a> for ways that you think it can be improved.</p>
                     </div>
                 </div>
         </div>

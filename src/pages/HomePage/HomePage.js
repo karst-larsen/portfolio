@@ -21,10 +21,10 @@ import nodeIcon from '../../assets/icons/node.svg'
 import expressIcon from '../../assets/icons/express.svg'
 import brainstationIcon from '../../assets/icons/brainstation.svg'
 import brainstationIconBlue from '../../assets/icons/BrainStationLogoBlue.svg'
-import visualEyesLogo from '../../assets/icons/visualeyesspectrum.svg'
+import visualEyesLogo from '../../assets/icons/spectrumVisualEyes.png'
 import bmoImage from '../../assets/images/bmo-image.png'
 import bmoLogo from '../../assets/images/bmo-logo.png'
-import personalIcon from '../../assets/images/BSTN-May-2022-Toront-CT-Headshot-40 1.svg'
+import personalIcon from '../../assets/images/profilePic.png'
 
 const HomePage = () => {
     return (
@@ -161,8 +161,8 @@ const HomePage = () => {
                     <img src={visualEyesLogo} alt="VisualEyes Logo" className="projects__visualeyes-logo"/>
                     <p className="projects__information" >An interactive music UI that pairs visual effects to user inputs on drum and synth sequencers.</p>
                     <div className="projects__links" >
-                        <a href="https://visual-eyes-pi.vercel.app/" target="blank" className="projects__link">Play</a>
-                        <a href="https://github.com/karst-larsen/VisualEyes" target="blank" className="projects__link">GitHub</a>
+                        <a href="https://visual-eyes-pi.vercel.app/" target="_blank" rel="noreferrer" className="projects__link">Play</a>
+                        <a href="https://github.com/karst-larsen/VisualEyes" target="_blank" rel="noreferrer" className="projects__link">GitHub</a>
                         <Link to="/visual-eyes" className="projects__link">Learn More</Link>
                     </div>
                 </div>
@@ -180,8 +180,8 @@ const HomePage = () => {
                     </div>
                     <p className="projects__information">A hackathon group challenge to improve the UX for BMO's Newcomers-To-Canada (NTC) page.</p>
                     <div className="projects__links">
-                        <a href="https://bmo-hackathon-pink.vercel.app/" className="projects__link" target="blank">Open</a>
-                        <a href="https://github.com/karst-larsen/industry-hackathon-deployed" className="projects__link" target="blank">GitHub</a>
+                        <a href="https://bmo-hackathon-pink.vercel.app/" className="projects__link" target="_blank" rel="noreferrer">Open</a>
+                        <a href="https://github.com/karst-larsen/industry-hackathon-deployed" className="projects__link" target="_blank" rel="noreferrer">GitHub</a>
                         <Link to="/bmo-hackathon" className="projects__link">Learn More</Link>
                     </div>
                 </div>
