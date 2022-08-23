@@ -89,7 +89,7 @@ const VisualEyesPage = () => {
                 <div className="visual-page__container visual-page__container--next">
                     <div className="visual-page__wrapper">
                         <h2 className="visual-page__sub-header">What's next?</h2>
-                        <p className="visual-page__vs-information">As outlined by BrainStations capstone project timeline, I completed this project in two weeks, but there is still more I want to do!  The more I play around with it the more ideas I have for features that I'd like to implement for more functional use as an artist. Here's a few that I think would give the most impact:</p>
+                        <p className="visual-page__vs-information">As outlined by BrainStation's capstone project timeline, I completed this project in two weeks, but there is still more I want to do!  The more I play around with it the more ideas I have for features that I'd like to implement for more functional use as an artist. Here's a few that I think would give the most impact:</p>
                         <ul className="visual-page__improvements">
                             <li className="visual-page__improvement">Sequence Swapping, Clearing, Randomization
                                 <ul ul className="visual-page__improvements-item">
