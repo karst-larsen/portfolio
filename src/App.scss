@@ -4,6 +4,13 @@
   url('./assets/fonts/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
 }
+@font-face {
+  font-family: "Inter";
+  src: local(Inter),
+  url('./assets/fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 800;
+}
+
 
 @keyframes gradient-rotation {
 
@@ -32,6 +39,40 @@
 }
 
 @keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+
+  15% {
+    transform: rotate(30deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  35% {
+    transform: roate(30deg);
+  }
+
+  45% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes wave {
   0% {
     transform: rotate(0);
   }
@@ -403,6 +444,7 @@
     width: 100%;
     max-width: 59.375rem;
     margin: 0 auto;
+    margin-bottom: 2rem;
     min-height: 50vh;
   }
 
@@ -508,6 +550,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 7rem;
     cursor: pointer;
 
     &:hover {
@@ -537,9 +580,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
     height: 100%;
-    flex-grow: 1;
   }
 
   &__label {
@@ -559,6 +600,7 @@
   &__tech-category {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
@@ -567,12 +609,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 59rem;
     height: 45rem;
     max-height: 18rem;
-    margin: 0 auto;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-evenly;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 2rem;
 
     @media screen and (min-width: 768px) {
       max-height: 18rem;
@@ -675,14 +718,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 2rem solid #EEEEF0;
-    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
+    border: 1px solid #EEEEF0;
+    box-shadow: 0px 4px 0.5rem #EEEEF0;
+    border-radius: 1rem;
     padding: 0 1rem 1rem 1rem;
     margin-bottom: 4rem;
     position: relative;
-    width: 100vw;
+    width: calc(100vw - 4rem);
     transition: border-image 0.2s ease-in-out;
-    animation: gradient-rotation 10s linear infinite;
     background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
 
     @media screen and (min-width: 768px) {
@@ -707,7 +750,8 @@
     width: calc(100vw - 4rem);
     background-color: white;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #EEEEF0;
+    border: 1px solid #EEEEF0;
+    border-radius: 1rem 1rem 0 0;
     
     @media screen and (min-width: 768px) {
       width: 15rem;
@@ -750,6 +794,7 @@
     width: calc(100vw - 4rem);
     box-shadow: 0px 4px 0.5rem #EEEEF0;
     padding: 0 1rem 1rem 1rem;
+    border-radius: 1rem;
     margin: 1rem;
     background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
     transition: box-shadow 0.2s ease-in-out;
@@ -783,6 +828,8 @@
     width: calc(100vw - 4rem);
     height: 100%;
     max-height: 16rem;
+    border-radius: 1rem 1rem 0 0;
+    border: 1px solid #EEEEF0;
     
     @media screen and (min-width: 768px) {
       border-radius: 1rem;
@@ -832,12 +879,13 @@
     border-radius: 2rem;
     font-size: 1rem;
     text-decoration: none;
-    font-weight: bold;
-    background-color: #303030;
-    color: white;
+    font-weight: 400;
+    border: 1px solid #EEEEF0;
+    background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
+    color: #253259;
     
     &:hover {
-      background-color: #202020;
+      background: #EEEEF0;
     }
     
     @media screen and (min-width: 768px) {
@@ -870,8 +918,10 @@
   &__message {
     display: flex;
     align-items: center;
+    justify-content: center;
     color: #253259;
     font-weight: bold;
+    width: 18.75rem;
   }
 
   &__text-box {
@@ -902,7 +952,7 @@
   }
 
   &__react {
-    height: 2rem;
+    height: 1.5rem;
     margin: 0 0.5rem;
   }
 
@@ -981,8 +1031,7 @@
     justify-content: center;
     align-items: center;
     height: 3rem;
-
+    width: 100%;
     background-color: #F2B33D;
-   justify-self: flex-end;
   }
 }

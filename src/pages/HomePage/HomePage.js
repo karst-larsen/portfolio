@@ -48,18 +48,18 @@ const HomePage = () => {
               <h1 className="about__header">About Me</h1>
             <div className="about__text-container">
               <h2 className="about__label">Creative Development</h2>
-              <p className="about__information">I have been a creative developer my entire life. From editing YouTube videos, producing electronic music in digital audio workstations, up to building courses as an eLearning developer. I picked up JavaScript out of curiosity during the pandemic and felt a huge sense of reward from finishing coding challenges and improving my understanding of the language.</p>
+              <p className="about__information">I have always had a passion for creative development; editing YouTube videos, producing electronic music in digital audio workstations, and building courses as an eLearning developer. I picked up JavaScript out of curiosity during the pandemic and felt a huge sense of reward from completing coding challenges and improving my understanding of the language.</p>
             </div>
             <div className="about__text-container">  
               <div className="about__brainstation-graduate">
                 <img className="about__brainstation" src={brainstationIconBlue} alt="Brainstation Logo" />
                 <h2 className="about__graduate-label">BrainStation Graduate</h2>
               </div>
-              <p className="about__information" >After self-teaching web development for over a year, I consolidated and expanded my learning through <a href="https://brainstation.io/course/online/remote-web-development-bootcamp" className="about__link" target="blank">BrainStation's Web Development Bootcamp</a>. Now, as a graduate from the program, I can build websites and web applications from client to server, supplemented by years of relative editing practice under my belt.</p>
+              <p className="about__information">As an extension to my numerous years of editing experience, I began studying and self-teaching web-development. After a year of exploration of the field, I made the decision to complete <a href="https://brainstation.io/course/online/remote-web-development-bootcamp" className="about__link" target="blank">BrainStation's Web Development Bootcamp</a>. This program allowed me to consolidate and expand my learning. Now, as a graduate of the program, I can build websites and web applications from client to server.</p>
             </div>
             <div className="about__text-container">
                 <h2 className="about__label">Next Steps</h2>
-                <p className="about__information">I'm currently taking courses on Scrimba to continue professional development, creating application concepts to add to my portfolio, and actively seeking developer roles!</p>
+                <p className="about__information">I am always working on creating novel application concepts, expanding my portfolio and refining my skills. Additionally, I am currently taking courses on Scrimba, learning new JavaScript frameworks to continue professional development, and actively seeking developer roles!</p>
             </div>
           </div>
         </section>

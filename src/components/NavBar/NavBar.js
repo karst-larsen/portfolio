@@ -23,7 +23,7 @@ function NavBar() {
                         <Link to="/#skills" className="header__nav-link">Skills</Link>
                         <Link to="/#projects" className="header__nav-link">Projects</Link>
                         <Link to="/#contact"  className="header__nav-link">Contact</Link>
-                        <a href={resume} className="header__nav-link" target="blank">Resume</a>
+                        <a href={resume} download className="header__nav-link" target="blank">Resume</a>
                     </Menu>
                 </div>
     </header>
