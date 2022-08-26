@@ -188,7 +188,6 @@
   display: flex;
   position: fixed;
   width: 100%;
-  min-width: 16rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -255,7 +254,6 @@
   margin: 0 auto;
   background-color: #253259;
   color: #EEEEF0;
-  min-width: 16rem;
   scroll-snap-align: center;
   
   @media screen and (min-width: 768px) {
@@ -413,7 +411,6 @@
   background-color: #F2B33D;
   color: #253259;
   min-height: 100vh;
-  min-width: 16rem;
   scroll-snap-align: center;
   
   @media screen and (min-width: 768px) {
@@ -515,7 +512,6 @@
   padding: 0 2rem 2rem 2rem;
   text-align: left;
   background-color: #EEEEF0;
-  min-width: 16rem;
   margin: 0 auto;
   height: 100%;
   min-height: 100vh;
@@ -655,7 +651,6 @@
   text-align: left;
   background-color: white;
   min-height: 100vh;
-  min-width: 16rem;
   margin: 0 auto;
 
   &__responsive-container {
