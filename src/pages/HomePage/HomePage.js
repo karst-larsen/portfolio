@@ -163,7 +163,7 @@ const HomePage = () => {
                     <div className="projects__links" >
                         <a href="https://visual-eyes-pi.vercel.app/" target="_blank" rel="noreferrer" className="projects__link">Play</a>
                         <a href="https://github.com/karst-larsen/VisualEyes" target="_blank" rel="noreferrer" className="projects__link">GitHub</a>
-                        <Link to="/visual-eyes" className="projects__link">Learn More</Link>
+                        <Link to="/visual-eyes" className="projects__link">About Project</Link>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@ const HomePage = () => {
                     <div className="projects__links">
                         <a href="https://bmo-hackathon-pink.vercel.app/" className="projects__link" target="_blank" rel="noreferrer">Open</a>
                         <a href="https://github.com/karst-larsen/industry-hackathon-deployed" className="projects__link" target="_blank" rel="noreferrer">GitHub</a>
-                        <Link to="/bmo-hackathon" className="projects__link">Learn More</Link>
+                        <Link to="/bmo-hackathon" className="projects__link">About Project</Link>
                     </div>
                 </div>
             </div>
