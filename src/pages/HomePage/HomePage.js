@@ -18,7 +18,7 @@ import reactIcon from '../../assets/icons/react.svg'
 import mysqlIcon from '../../assets/icons/mysql.svg'
 import toneIcon from '../../assets/icons/tone.svg'
 import nodeIcon from '../../assets/icons/node.svg'
-import expressIcon from '../../assets/icons/express.svg'
+import expressIcon from '../../assets/icons/exprjs.svg'
 import brainstationIcon from '../../assets/icons/brainstation.svg'
 import brainstationIconBlue from '../../assets/icons/BrainStationLogoBlue.svg'
 import visualEyesLogo from '../../assets/icons/spectrumVisualEyes.png'
@@ -38,14 +38,14 @@ const HomePage = () => {
                         <span className="personal__hand" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">👋🏽</span>
                         <hr className="personal__horizontal-line" data-aos="fade-right" data-aos-delay="500" data-aos-once="true" />
                     </h1>
-                    <span className="personal__header-subline personal--italic personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">I'm a Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
+                    <span className="personal__header-subline personal__position" data-aos="fade-up" data-aos-delay="750" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true">I'm a Full Stack Developer based out of Toronto, Ontario. Lover of JavaScript and interactive media.</span> <br />
                     </div>
               </div>
           </div>
         </section>
         <section className="about" id="about">
           <div className="about__responsive-container">
-              <h1 className="about__header">About Me</h1>
+              <h1 className="about__header">ABOUT ME</h1>
             <div className="about__text-container">
               <h2 className="about__label">Creative Development</h2>
               <p className="about__information">I have always had a passion for creative development; editing YouTube videos, producing electronic music in digital audio workstations, and building courses as an eLearning developer. I picked up JavaScript out of curiosity during the pandemic and felt a huge sense of reward from completing coding challenges and improving my understanding of the language.</p>
@@ -64,7 +64,7 @@ const HomePage = () => {
           </div>
         </section>
         <section className="skills" id="skills">
-        <h1 className="skills__header">Skills</h1>
+        <h1 className="skills__header">SKILLS</h1>
             <div className="skills__technologies">
               <div className="skills__tech-category">
                 <h2 className="skills__label">Languages and Frameworks</h2>
@@ -152,7 +152,7 @@ const HomePage = () => {
         </section>
         <section className="projects" id="projects">
             <div className="projects__responsive-container">
-            <h2 className="projects__header">Projects</h2>
+            <h2 className="projects__header">PROJECTS</h2>
             <div className="projects__visualeyes-container">
                 <div className="projects__visualeyes-icon-logo">
                     <VisualEye />
