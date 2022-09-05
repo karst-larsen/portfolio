@@ -2,7 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { slide as Menu } from 'react-burger-menu'
 import { HashLink as Link } from 'react-router-hash-link'
-import resume from '../../assets/files/Karsten_ONeill-Larsen_Resume.pdf'
+import resume from '../../assets/files/Karsten_ONeill_Larsen_Resume.pdf'
 
 function NavBar() {
     AOS.init();

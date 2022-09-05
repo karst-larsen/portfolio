@@ -7,7 +7,7 @@ function Contact() {
         <section className="contact" id="contact">
         <div className="contact__responsive-container">
           <div className="contact__text-box">
-            <h1 className="contact__cta">Contact</h1>
+            <h1 className="contact__cta">CONTACT</h1>
             <p className="contact__information">I'm looking to learn, grow, and write impactful code with a team of developers.</p>
             <p className="contact__information">For inquiries and opportunities, reach out to my channels:</p>
           </div>
