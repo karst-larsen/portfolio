@@ -540,15 +540,16 @@
     }
   }
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__icon-label {
     margin-bottom: 0.5rem;
-    // opacity: 0;
-    // transform: translateY(1rem) scale(0.5, 0.5);
     transition: all 0.2s ease-in-out;
     color: #253259;
     font-size: .75rem;
     text-align: center;
-    // font-weight: bold;
     padding: 0.5rem;
     margin: 0;
   }
@@ -557,7 +558,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 5.5rem;
+    width: 6rem;
     height: 6.5rem;
     cursor: pointer;
     border-radius: 1rem;

@@ -69,83 +69,119 @@ const HomePage = () => {
               <div className="skills__tech-category">
                 <h2 className="skills__label">Languages and Frameworks</h2>
                 <div className="skills__technology-group">
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">HTML</span>
-                    <img className="skills__icon" src={htmlIcon} alt="HTML Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">CSS</span>
-                    <img className="skills__icon" src={cssIcon} alt="CSS Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">JavaScript</span>
-                    <img className="skills__icon" src={javascriptIcon} alt="Javascript Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">SASS</span>
-                    <img className="skills__icon" src={sassIcon} alt="Sass Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">React</span>
-                    <img className="skills__icon skills--react" src={reactIcon} alt="ReactJS Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">MySQL</span>
-                    <img className="skills__icon" src={mysqlIcon} alt="MySQL Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">ToneJS</span>
-                    <img className="skills__icon" src={toneIcon} alt="ToneJS Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">ExpressJS</span>
-                    <img className="skills__icon" src={expressIcon} alt="Express Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">NodeJS</span>
-                    <img className="skills__icon" src={nodeIcon} alt="NodeJS Logo" />
-                  </div>
+                  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">HTML</span>
+                      <img className="skills__icon" src={htmlIcon} alt="HTML Logo" />
+                    </div>
+                  </a>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">CSS</span>
+                      <img className="skills__icon" src={cssIcon} alt="CSS Logo" />
+                    </div>
+                  </a>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">JavaScript</span>
+                      <img className="skills__icon" src={javascriptIcon} alt="Javascript Logo" />
+                    </div>
+                  </a>
+                  <a href="https://sass-lang.com/documentation/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">SASS</span>
+                      <img className="skills__icon" src={sassIcon} alt="Sass Logo" />
+                    </div>
+                  </a>
+                  <a href="https://reactjs.org/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">React.js</span>
+                      <img className="skills__icon skills--react" src={reactIcon} alt="ReactJS Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">MySQL</span>
+                      <img className="skills__icon" src={mysqlIcon} alt="MySQL Logo" />
+                    </div>
+                  </a>
+                  <a href="https://tonejs.github.io/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Tone.js</span>
+                      <img className="skills__icon" src={toneIcon} alt="ToneJS Logo" />
+                    </div>
+                  </a>
+                  <a href="https://expressjs.com/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Express.js</span>
+                      <img className="skills__icon" src={expressIcon} alt="Express Logo" />
+                    </div>
+                  </a>
+                  <a href="https://nodejs.dev/en/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Node.js</span>
+                      <img className="skills__icon" src={nodeIcon} alt="NodeJS Logo" />
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="skills__tech-category">
                 <h2 className="skills__label" >Production and Design</h2>
                 <div className="skills__technology-group">
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">Photoshop</span>
-                    <img className="skills__icon" src={photoShopIcon} alt="Photoshop Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">Audition</span>
-                    <img className="skills__icon" src={auditionIcon} alt="Audition Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">Illustrator</span>
-                    <img className="skills__icon" src={illustratorIcon} alt="Illustrator Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label"> Dreamweaver</span>
-                    <img className="skills__icon" src={dreamweaverIcon} alt="Dreamweaver Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">InDesign</span>
-                    <img className="skills__icon" src={inDesignIcon} alt="InDesign Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">After Effects</span>
-                    <img className="skills__icon" src={afterEffectsIcon} alt="After Effects Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">Premiere Pro</span>
-                    <img className="skills__icon" src={premiereProIcon} alt="Premiere Pro Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">Ableton Live</span>
-                    <img className="skills__icon" src={abletonIcon} alt="Ableton Logo" />
-                  </div>
-                  <div className="skills__icon-box">
-                    <span className="skills__icon-label">Figma</span>
-                    <img className="skills__icon" src={figmaIcon} alt="Figma Logo" />
-                  </div>
+                <a href="https://www.adobe.com/ca/products/photoshop.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Photoshop</span>
+                      <img className="skills__icon" src={photoShopIcon} alt="Photoshop Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.adobe.com/ca/products/audition.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Audition</span>
+                      <img className="skills__icon" src={auditionIcon} alt="Audition Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.adobe.com/ca/products/illustrator.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Illustrator</span>
+                      <img className="skills__icon" src={illustratorIcon} alt="Illustrator Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.adobe.com/ca/products/dreamweaver.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label"> Dreamweaver</span>
+                      <img className="skills__icon" src={dreamweaverIcon} alt="Dreamweaver Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.adobe.com/ca/products/indesign.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">InDesign</span>
+                      <img className="skills__icon" src={inDesignIcon} alt="InDesign Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.adobe.com/ca/products/aftereffects.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">After Effects</span>
+                      <img className="skills__icon" src={afterEffectsIcon} alt="After Effects Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.adobe.com/ca/products/premiere.html" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Premiere Pro</span>
+                      <img className="skills__icon" src={premiereProIcon} alt="Premiere Pro Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.ableton.com/en/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Ableton Live</span>
+                      <img className="skills__icon" src={abletonIcon} alt="Ableton Logo" />
+                    </div>
+                  </a>
+                  <a href="https://www.figma.com/ui-design-tool/" target="_blank" rel="noreferrer" className="skills__link">
+                    <div className="skills__icon-box">
+                      <span className="skills__icon-label">Figma</span>
+                      <img className="skills__icon" src={figmaIcon} alt="Figma Logo" />
+                    </div>
+                  </a>
                 </div>
               </div>
           </div>
