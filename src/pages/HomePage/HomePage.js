@@ -1,30 +1,17 @@
 import '../../App.scss';
-import { Link } from 'react-router-dom'
 import VisualEye from '../../components/VisualEye/VisualEye';
-import photoShopIcon from '../../assets/icons/photoshop.svg'
-import illustratorIcon from '../../assets/icons/illustrator.svg'
-import auditionIcon from '../../assets/icons/audition.svg'
-import inDesignIcon from '../../assets/icons/indesign.svg'
-import afterEffectsIcon from '../../assets/icons/aftereffects.svg'
-import premiereProIcon from '../../assets/icons/premierepro.svg'
-import dreamweaverIcon from '../../assets/icons/dreamweaver.svg'
-import abletonIcon from '../../assets/icons/ableton.svg'
-import figmaIcon from '../../assets/icons/figma.svg'
-import htmlIcon from '../../assets/icons/html.svg'
-import cssIcon from '../../assets/icons/css.svg'
-import javascriptIcon from '../../assets/icons/javascript.svg'
-import sassIcon from '../../assets/icons/sass.svg'
-import reactIcon from '../../assets/icons/react.svg'
-import mysqlIcon from '../../assets/icons/mysql.svg'
-import toneIcon from '../../assets/icons/tone.svg'
-import nodeIcon from '../../assets/icons/node.svg'
-import expressIcon from '../../assets/icons/exprjs.svg'
 import brainstationIcon from '../../assets/icons/brainstation.svg'
 import brainstationIconBlue from '../../assets/icons/BrainStationLogoBlue.svg'
 import visualEyesLogo from '../../assets/icons/spectrumVisualEyes.png'
 import bmoImage from '../../assets/images/bmo-image.png'
 import bmoLogo from '../../assets/images/bmo-logo.png'
 import personalIcon from '../../assets/images/profilePic.png'
+import bandSiteIcon from '../../assets/images/band.jpeg';
+import bandSiteLogo from '../../assets/images/Logo-bandsite.svg'
+import quantipomoLogo from '../../assets/images/quantipomo-logo.png';
+import quantipomoImage from '../../assets/images/quantipomo-image.png';
+import { languagesData, skillsData } from '../../assets/utils/skillsData'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
     return (
@@ -45,10 +32,9 @@ const HomePage = () => {
         </section>
         <section className="about" id="about">
           <div className="about__responsive-container">
-              <h1 className="about__header">ABOUT ME</h1>
             <div className="about__text-container">
               <h2 className="about__label">Creative Development</h2>
-              <p className="about__information">I have always had a passion for creative development; editing YouTube videos, producing electronic music in digital audio workstations, and building courses as an eLearning developer. I picked up JavaScript out of curiosity during the pandemic and felt a huge sense of reward from completing coding challenges and improving my understanding of the language.</p>
+              <p className="about__information">I have always had a passion for creative development in many forms; editing YouTube videos, producing electronic music in digital audio workstations, and building courses as an eLearning developer. I picked up JavaScript out of curiosity during the pandemic and felt a huge sense of reward from completing coding challenges and improving my understanding of the language.</p>
             </div>
             <div className="about__text-container">  
               <div className="about__brainstation-graduate">
@@ -59,129 +45,44 @@ const HomePage = () => {
             </div>
             <div className="about__text-container">
                 <h2 className="about__label">Next Steps</h2>
-                <p className="about__information">I am always working on creating novel application concepts, expanding my portfolio and refining my skills. Additionally, I am currently taking courses on Scrimba, learning new JavaScript frameworks to continue professional development, and actively seeking developer roles!</p>
+                <p className="about__information">I am currently working as a Teaching Assistant at BrainStation after being nominated as a suitable candidate to help future students through the program! This has allowed me to revisit the material and get deeper understanding of programming logic by answering student questions and reviewing code. Outside of my role as a Teaching Assistant, I am actively seeking developer roles in creative, experiential environments.</p>
             </div>
           </div>
         </section>
         <section className="skills" id="skills">
         <h1 className="skills__header">SKILLS</h1>
+        <h2 className="skills__sub-header">A collection of software and languages that I'm familiar with. I'm also eager to learn new frameworks and developer tools to expand my skillset! My current deep dive is <a className="skills__link" href="https://reactjs.org/docs/hooks-intro.html">React Hooks.</a></h2>
+        <hr className="personal__horizontal-line personal__horizontal-line--skills-section" data-aos="fade-up" data-aos-once="true" />
+        
             <div className="skills__technologies">
               <div className="skills__tech-category">
                 <h2 className="skills__label">Languages and Frameworks</h2>
                 <div className="skills__technology-group">
-                  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">HTML</span>
-                      <img className="skills__icon" src={htmlIcon} alt="HTML Logo" />
+                  {languagesData.map(language => {
+                    return (
+                      <a key={Math.random()} href={language.link} target="_blank" rel="noreferrer" className="skills__link">
+                      <div className="skills__icon-box">
+                        <span className="skills__icon-label">{language.name}</span>
+                        <img className="skills__icon" src={language.image} alt={`${language.name} Logo`} />
                     </div>
-                  </a>
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">CSS</span>
-                      <img className="skills__icon" src={cssIcon} alt="CSS Logo" />
-                    </div>
-                  </a>
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">JavaScript</span>
-                      <img className="skills__icon" src={javascriptIcon} alt="Javascript Logo" />
-                    </div>
-                  </a>
-                  <a href="https://sass-lang.com/documentation/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">SASS</span>
-                      <img className="skills__icon" src={sassIcon} alt="Sass Logo" />
-                    </div>
-                  </a>
-                  <a href="https://reactjs.org/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">React.js</span>
-                      <img className="skills__icon skills--react" src={reactIcon} alt="ReactJS Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">MySQL</span>
-                      <img className="skills__icon" src={mysqlIcon} alt="MySQL Logo" />
-                    </div>
-                  </a>
-                  <a href="https://tonejs.github.io/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Tone.js</span>
-                      <img className="skills__icon" src={toneIcon} alt="ToneJS Logo" />
-                    </div>
-                  </a>
-                  <a href="https://expressjs.com/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Express.js</span>
-                      <img className="skills__icon" src={expressIcon} alt="Express Logo" />
-                    </div>
-                  </a>
-                  <a href="https://nodejs.dev/en/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Node.js</span>
-                      <img className="skills__icon" src={nodeIcon} alt="NodeJS Logo" />
-                    </div>
-                  </a>
+                  </a> 
+                    )
+                  })}
                 </div>
               </div>
               <div className="skills__tech-category">
                 <h2 className="skills__label" >Production and Design</h2>
                 <div className="skills__technology-group">
-                <a href="https://www.adobe.com/ca/products/photoshop.html" target="_blank" rel="noreferrer" className="skills__link">
+                  {skillsData.map(skill => {
+                    return (
+                    <a key={Math.random()} href={skill.link} target="_blank" rel="noreferrer" className="skills__link">
                     <div className="skills__icon-box">
                       <span className="skills__icon-label">Photoshop</span>
-                      <img className="skills__icon" src={photoShopIcon} alt="Photoshop Logo" />
+                      <img className="skills__icon" src={skill.image} alt={`${skill.name} Logo`} />
                     </div>
                   </a>
-                  <a href="https://www.adobe.com/ca/products/audition.html" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Audition</span>
-                      <img className="skills__icon" src={auditionIcon} alt="Audition Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.adobe.com/ca/products/illustrator.html" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Illustrator</span>
-                      <img className="skills__icon" src={illustratorIcon} alt="Illustrator Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.adobe.com/ca/products/dreamweaver.html" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label"> Dreamweaver</span>
-                      <img className="skills__icon" src={dreamweaverIcon} alt="Dreamweaver Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.adobe.com/ca/products/indesign.html" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">InDesign</span>
-                      <img className="skills__icon" src={inDesignIcon} alt="InDesign Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.adobe.com/ca/products/aftereffects.html" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">After Effects</span>
-                      <img className="skills__icon" src={afterEffectsIcon} alt="After Effects Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.adobe.com/ca/products/premiere.html" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Premiere Pro</span>
-                      <img className="skills__icon" src={premiereProIcon} alt="Premiere Pro Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.ableton.com/en/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Ableton Live</span>
-                      <img className="skills__icon" src={abletonIcon} alt="Ableton Logo" />
-                    </div>
-                  </a>
-                  <a href="https://www.figma.com/ui-design-tool/" target="_blank" rel="noreferrer" className="skills__link">
-                    <div className="skills__icon-box">
-                      <span className="skills__icon-label">Figma</span>
-                      <img className="skills__icon" src={figmaIcon} alt="Figma Logo" />
-                    </div>
-                  </a>
+                    )
+                  })}
                 </div>
               </div>
           </div>
@@ -189,6 +90,20 @@ const HomePage = () => {
         <section className="projects" id="projects">
             <div className="projects__responsive-container">
             <h2 className="projects__header">PROJECTS</h2>
+            <div className="projects__container">
+                  <div className="projects__bmo-icon-logo">
+                      <img src={quantipomoImage} className="projects__image projects__image--quantipomo" alt="BandSite Group" />
+                  </div>
+                  <div className="projects__bmo-description-links">
+                    <div className="projects__project-banner projects__project-banner--quantipomo">
+                      <img src={quantipomoLogo} alt="Logo of Band Site" className="projects__quantipomo-logo" />
+                    </div>
+                  <p className="projects__information">My current work in progress: Quantipomo! A pomodoro timer application that gamifies deep focus.</p>
+                  <div className="projects__links" >
+                        <button className="projects__link">Coming Soon!</button>
+                    </div>
+                  </div>
+            </div>
             <div className="projects__visualeyes-container">
                 <div className="projects__visualeyes-icon-logo">
                     <VisualEye />
@@ -203,16 +118,15 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="projects__bmo-container">
+            <div className="projects__container">
                 <div className="projects__bmo-icon-logo">
-                    <img src={bmoImage} alt="BMO Header" className="projects__bmo-image" />
-
+                    <img src={bmoImage} alt="BMO Header" className="projects__image" />
                 </div>
                 <div className="projects__bmo-description-links">
                     <div className="projects__equation">
-                    <img className="projects__brainstation" src={brainstationIcon} alt="Brainstation Logo" />
-                    <span className="projects__multiply">X</span>
-                    <img src={bmoLogo} alt="BMO Logo" className="projects__bmo-logo" />
+                      <img className="projects__brainstation" src={brainstationIcon} alt="Brainstation Logo" />
+                      <span className="projects__multiply">X</span>
+                      <img src={bmoLogo} alt="BMO Logo" className="projects__bmo-logo" />
                     </div>
                     <p className="projects__information">A hackathon group challenge to improve the UX for BMO's Newcomers-To-Canada (NTC) page.</p>
                     <div className="projects__links">
@@ -221,6 +135,21 @@ const HomePage = () => {
                         <Link to="/bmo-hackathon" className="projects__link">About</Link>
                     </div>
                 </div>
+            </div>
+            <div className="projects__container">
+                  <div className="projects__bmo-icon-logo">
+                      <img src={bandSiteIcon} className="projects__bmo-image" alt="BandSite Group" />
+                  </div>
+                  <div className="projects__bmo-description-links">
+                    <div className="projects__project-banner projects__project-banner--bandsite">
+                      <img src={bandSiteLogo} alt="Logo of Band Site" className="projects__bandsite-logo" />
+                    </div>
+                  <p className="projects__information">A mockup of a Band Site. Uses GET, POST, PUT, and DELETE API requests.</p>
+                  <div className="projects__links" >
+                        <a href="https://karsten-oneilllarsen-bandsite.vercel.app/index.html" target="_blank" rel="noreferrer" className="projects__link">Open</a>
+                        <a href="https://github.com/karst-larsen/karsten-oneilllarsen-bandsite" target="_blank" rel="noreferrer" className="projects__link">GitHub</a>
+                    </div>
+                  </div>
             </div>
             </div>
         </section>

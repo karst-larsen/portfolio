@@ -1,15 +1,6 @@
-@font-face {
-  font-family: "Inter";
-  src: local(Inter),
-  url('./assets/fonts/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Inter";
-  src: local(Inter),
-  url('./assets/fonts/Inter-Bold.ttf') format('truetype');
-  font-weight: 800;
-}
+@use './partials/global';
+@use './partials/fonts';
+
 
 @keyframes spiral {
   0% {
@@ -41,31 +32,6 @@
   }
 }
 
-@keyframes gradient-rotation {
-
-  0% {
-    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
-  }
-  16% {
-    border-image: conic-gradient(yellow, lime, aqua, blue, magenta, red, yellow) 0.5;
-  }
-  32% {
-    border-image: conic-gradient(lime, aqua, blue, magenta, red, yellow, lime) 0.5;
-  }
-  48% {
-    border-image: conic-gradient(aqua, blue, magenta, red, yellow, lime, aqua) 0.5;
-  }
-  64% {
-    border-image: conic-gradient(blue, magenta, red, yellow, lime, aqua, blue) 0.5;
-  }
-  80% {
-    border-image: conic-gradient(magenta, red, yellow, lime, aqua, blue, magenta) 0.5;
-  }
-  100% {
-    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 0.5;
-  }
-
-}
 
 @keyframes wave {
   0% {
@@ -156,14 +122,6 @@
   100% {
     width: 100%;
   }
-}
-
-*, body {
-  box-sizing: border-box;
-  font-family: 'Inter';
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .bm-burger-button {
@@ -278,7 +236,8 @@
 
 .personal {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 67.5rem;
   padding: 0 2rem;
   justify-content: flex-start;
   margin: 0 auto;
@@ -302,6 +261,11 @@
   @media screen and (min-width: 768px) {
     max-width: 650px;
     margin: 1rem 100% 1rem 0;
+  }
+
+  &--skills-section {
+    border: 3px solid #253259; 
+    margin: 0 auto;
   }
   }
 
@@ -443,9 +407,8 @@
   flex-direction: column;
   padding: 0 2rem;
   text-align: left;
-  background-color: #F2B33D;
-  color: #253259;
-  min-height: 100vh;
+  color: #F2B33D;
+  background-color: #253259;
   min-width: 16rem;
   scroll-snap-align: center;
   
@@ -476,8 +439,7 @@
     width: 100%;
     max-width: 59.375rem;
     margin: 0 auto;
-    margin-bottom: 2rem;
-    min-height: 50vh;
+    margin-bottom: 5rem;
   }
 
   &__brainstation-graduate {
@@ -506,6 +468,7 @@
 
   &__information {
     font-size: 1rem;
+    color: #EEEEF0;
 
     @media screen and (min-width: 768px) {
       font-size: 1.125rem;
@@ -550,27 +513,35 @@
   background-color: #EEEEF0;
   min-width: 16rem;
   margin: 0 auto;
-  height: 100%;
-  min-height: 100vh;
   border-bottom: 1px solid #CCC;
   
   @media screen and (min-width: 768px) {
-    padding: 0 4rem 2rem 4rem;
+    padding: 2rem 4rem 2rem 4rem;
   }
   
   &__header {
     text-align: center;
     font-size: 3rem;
     color: #253259;
-    margin: 5rem 0 3rem 0;
+    margin: 5rem 0 0 0;
     
     @media screen and (min-width: 768px) {
       font-size: 3rem;
     }
   }
 
+  &__sub-header {
+    margin: 2rem auto;
+
+    width: 75%;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
   &__link {
-    text-decoration: none;
+    // text-decoration: none;
+    color: #253259;
   }
 
   &__icon-label {
@@ -635,7 +606,10 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 100%;
+
+    @media screen and (min-width: 768px) {
+      height: auto;
+    }
   }
 
   &__label {
@@ -709,7 +683,6 @@
   padding: 0 2rem;
   text-align: left;
   background-color: white;
-  min-height: 100vh;
   min-width: 16rem;
   margin: 0 auto;
 
@@ -719,8 +692,6 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 100%;
-    min-height: calc(100vh - 20px);
     max-width: 100rem;
     margin: 0 auto;
   }
@@ -759,7 +730,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
-    margin: 5rem 0 3rem 0;
+    margin: 3rem 0 3rem 0;
 
     @media screen and (min-width: 768px) {
         font-size: 3rem;
@@ -785,6 +756,7 @@
     @media screen and (min-width: 768px) {
       padding: 1rem;
       flex-direction: row;
+      max-width: 87.5rem;
     }
 
     }
@@ -840,7 +812,7 @@
     }
   }
 
-  &__bmo-container {
+  &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -859,6 +831,7 @@
     
     @media screen and (min-width: 768px) {
       height: 18.75rem;
+      max-width: 87.5rem;
       padding: 1rem;
       flex-direction: row;
       align-items: stretch;
@@ -892,6 +865,26 @@
     }
   }
 
+  &__image {
+    object-fit: cover;
+    width: calc(100vw - 4rem);
+    height: 100%;
+    max-height: 16rem;
+    border-radius: 1rem 1rem 0 0;
+    border: 1px solid #EEEEF0;
+
+    &--quantipomo {
+      object-position: 55% 50%;
+    }
+    
+    @media screen and (min-width: 768px) {
+      border-radius: 1rem;
+      box-shadow: 0px 0px 8px #CCC;
+      width: 100%;
+    }
+
+  }
+
   &__bmo-logo {
     width: 10rem;
     position: relative; 
@@ -908,6 +901,27 @@
     @media screen and (min-width: 768px) {
       width: 70%;
     }
+  }
+
+
+  &__project-banner {
+    padding: 1rem;
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 1rem;
+    text-align: center;
+    
+    &--bandsite {
+      background-color: #323232;
+    }
+    
+    &--quantipomo {
+      background-color: #3098BB;
+    }
+  }
+
+  &__quantipomo-logo {
+    width: 15rem;
   }
 
   &__links {
@@ -954,7 +968,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 3rem) ; 
+  height: calc(100vh - 3rem);
+  max-height: 67.5rem; 
+  min-height: 67.5rem;
   background-color: #253259;
   color: #EEEEF0;
   padding: 0 2rem;

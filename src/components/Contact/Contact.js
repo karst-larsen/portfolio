@@ -119,12 +119,6 @@ class Contact extends Component {
           <a href="https://github.com/karst-larsen"  className="contact__social-link" target="blank"><img src={gitHubIcon} className="contact__icon" alt="LinkedIn Icon" /></a>
         </div>
       </section>
-        <footer className="contact__footer">
-            <span className="contact__message">Made in <img src={reactIcon} alt="React Icon" className="contact__react" /> by Karsten Larsen</span>
-            <div className="contact__socials">
-            
-            </div>
-        </footer>
         </>
     );
   }
