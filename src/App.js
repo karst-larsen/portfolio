@@ -1,6 +1,5 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import './App.scss';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import VisualEyesPage from './pages/VisualEyesPage/VisualEyesPage';

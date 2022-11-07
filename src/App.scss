@@ -238,6 +238,7 @@
   display: flex;
   height: 100vh;
   max-height: 67.5rem;
+  min-height: 31.25rem;
   padding: 0 2rem;
   justify-content: flex-start;
   margin: 0 auto;
@@ -254,19 +255,25 @@
   animation: expand 1s ease-in forwards;
   animation-delay: 0.5s;
   width: 0%;
-  max-width: 500px;
+  max-width: 20rem;
   border: 1px solid #F2B33D;
   margin: 1rem 100% 0 0;
 
   @media screen and (min-width: 768px) {
-    max-width: 650px;
+    max-width: 33rem;
     margin: 1rem 100% 1rem 0;
   }
 
   &--skills-section {
     border: 3px solid #253259; 
     margin: 0 auto;
-  }
+    max-width: 100%;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      max-width: 42.5rem
+    }
+    }
   }
 
   &__responsive-container {
@@ -278,23 +285,6 @@
     max-width: 59.375rem;
     margin: 4rem auto;
     padding-bottom: 1rem;
-  }
-
-  &__hand {
-    display: inline-block;
-    margin-left: 1rem;
-    font-size: 2.5rem;
-    animation: wave 5s ease-in-out infinite;
-    animation-delay: 1000ms;
-    transform-origin: 70% 70%;
-    user-select: none;
-    -webkit-user-drag: none;
-    position: relative;
-    right: 0.5rem;
-
-    @media screen and (min-width: 768px) {
-      font-size: 4rem;
-    }
   }
 
   &__image-text {
@@ -334,7 +324,6 @@
       font-size: 3.75rem;
       padding-bottom: 0;
       }
-
   }
 
   &--bold {
@@ -359,14 +348,15 @@
   &__image {
     position: relative;
     border-radius: 50% 50%;
-    height: 13rem;
+    height: 15rem;
 
     @media screen and (min-width: 768px) {
       margin-right: 2rem;
+      height: 16rem;
     }
 
     @media screen and (min-width: 1280px) {
-      height: 16rem;
+      height: 18rem;
     }
   }
 
@@ -388,13 +378,14 @@
     font-weight: 400;
     font-size: 1rem;
     width: 100%;
-    max-width: 21.875rem;
+    max-width: 18.75rem;
     color: #F2B33D;
     position: relative;
     left: -0.35rem;
     
     @media screen and (min-width: 768px) {
-      width: 100%;
+      align-self: flex-start;
+      width: 35rem;
       max-width: 100%;
       font-size: 1.25rem;
       left: 0;
@@ -424,11 +415,11 @@
 
   &__label {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-decoration: underline;
 
     @media screen and (min-width: 768px) {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
   
@@ -467,6 +458,7 @@
   }
 
   &__information {
+    margin-top: 2rem;
     font-size: 1rem;
     color: #EEEEF0;
 
@@ -477,7 +469,6 @@
   
   &__graduate-label {
     font-size: 1.5rem;
-    margin-left: 1.2rem;
     font-weight: bold;
     display: inline-block;
     text-decoration: underline;
@@ -523,20 +514,22 @@
     text-align: center;
     font-size: 3rem;
     color: #253259;
-    margin: 5rem 0 0 0;
-    
-    @media screen and (min-width: 768px) {
-      font-size: 3rem;
-    }
+    margin: 3rem 0 0 0;
+  
   }
 
   &__sub-header {
+    width: 100%;
     margin: 2rem auto;
-
-    width: 75%;
+    color: #253259;
     text-align: center;
     font-size: 1.125rem;
     font-weight: 400;
+
+    @media screen and (min-width: 768px) {
+      margin: 2rem auto;
+      max-width: 42.5rem;
+    }
   }
 
   &__link {
@@ -730,7 +723,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0 1rem 0;
 
     @media screen and (min-width: 768px) {
         font-size: 3rem;
@@ -883,6 +876,20 @@
       width: 100%;
     }
 
+  }
+
+  &__image--quantipomo {
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+    border: 1px solid #EEEEF0;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 1rem;
+      box-shadow: 0px 0px 8px #CCC;
+      width: 100%;
+    }
   }
 
   &__bmo-logo {
@@ -1233,4 +1240,10 @@
       text-decoration: underline;
     }
   }
+}
+
+.red-bolded {
+  margin: 1rem 0;
+  color: red;
+  font-weight: bold;
 }
