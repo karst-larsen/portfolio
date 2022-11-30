@@ -63,14 +63,12 @@
     position: relative;
     height: auto;
     width: 15rem;
-    height: 12rem;
-    margin: 2rem auto;
+    height: 14rem;
     user-select: none;
 
     
     &__spiral {
         position: relative;
-        top: -0.45rem;
         left: 0.7rem;
         height: 13.75rem;
         z-index: 1;
@@ -81,7 +79,6 @@
     &__eye {
         position: relative;
         right: 13rem;
-        top: -0.5rem;
         height: 14rem;
         z-index: 3;
         user-select: none;

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ashthornton/asscroll": "^2.0.11",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,8 +14,6 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
-    "react-router": "5.3",
-    "react-router-dom": "5.3",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "sass": "^1.54.0",

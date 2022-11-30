@@ -1,5 +1,6 @@
 @use './partials/global';
 @use './partials/fonts';
+@use './partials/mixins' as *;
 
 
 @keyframes spiral {
@@ -32,88 +33,6 @@
   }
 }
 
-
-@keyframes wave {
-  0% {
-    transform: rotate(0);
-  }
-
-  15% {
-    transform: rotate(30deg);
-  }
-
-  20% {
-    transform: rotate(-10deg);
-  }
-
-  25% {
-    transform: rotate(20deg);
-  }
-
-  30% {
-    transform: rotate(-10deg);
-  }
-
-  35% {
-    transform: roate(30deg);
-  }
-
-  45% {
-    transform: rotate(30deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes wave {
-  0% {
-    transform: rotate(0);
-  }
-
-  15% {
-    transform: rotate(30deg);
-  }
-
-  20% {
-    transform: rotate(-10deg);
-  }
-
-  25% {
-    transform: rotate(20deg);
-  }
-
-  30% {
-    transform: rotate(-10deg);
-  }
-
-  35% {
-    transform: roate(30deg);
-  }
-
-  45% {
-    transform: rotate(30deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes wiggle {
-  0% {
-    transform: rotateZ(-5deg) scale(1.1, 1.1);
-  }
-
-  50% {
-    transform: rotateZ(5deg) scale(1.1, 1.1);
-  }
-  100% {
-    transform: rotateZ(-5deg) scale(1.1, 1.1);
-  }
-}
-
 @keyframes expand {
   0% {
     width: 0%;
@@ -132,8 +51,9 @@
   top: 1.75rem;
   z-index: 998;
 
-  @media screen and (min-width: 768px) {
-    right: 2rem;
+  @include tablet {
+    right: 4rem;
+    
   }
 }
 
@@ -180,8 +100,9 @@
   align-items: center;
   padding: 1rem 2rem;
   z-index: 1500;
+  background-color: #19223d;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 1rem 4rem;
   }
 
@@ -193,19 +114,14 @@
     width: 16rem;
   }
   
-  &__logo {
-    width: 17rem;
-    max-width: 10rem;
-    position: relative;
-    right: 5rem;
+  &__logo {  
     font-size: 1.5rem;
     text-align: right;
     font-weight: 900;
     line-height: 80%;
     letter-spacing: -2px;
-    background-color: rgba(48, 48, 48, 0.4);
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0rem;
     cursor: pointer;
   }
 
@@ -236,10 +152,9 @@
 
 .personal {
   display: flex;
-  height: 100vh;
   max-height: 67.5rem;
   min-height: 31.25rem;
-  padding: 0 2rem;
+  padding: 4rem 2rem 0 2rem;
   justify-content: flex-start;
   margin: 0 auto;
   background-color: #253259;
@@ -247,21 +162,26 @@
   min-width: 16rem;
   scroll-snap-align: center;
   
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 0 4rem;
+    padding-top: 5rem;
   }
   
   &__horizontal-line {
   animation: expand 1s ease-in forwards;
   animation-delay: 0.5s;
   width: 0%;
-  max-width: 20rem;
+  width: 20rem;
   border: 1px solid #F2B33D;
   margin: 1rem 100% 0 0;
 
-  @media screen and (min-width: 768px) {
-    max-width: 33rem;
+  @include tablet {
+    width: 23rem;
     margin: 1rem 100% 1rem 0;
+  }
+
+  @include desktop {
+    width: 28rem;
   }
 
   &--skills-section {
@@ -270,7 +190,7 @@
     max-width: 100%;
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       max-width: 42.5rem
     }
     }
@@ -282,9 +202,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 59.375rem;
     margin: 4rem auto;
-    padding-bottom: 1rem;
   }
 
   &__image-text {
@@ -292,9 +210,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 100rem;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       flex-direction: row;
     }
   }
@@ -303,10 +222,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100%;
     font-weight: normal;
     position: relative;
+
+    @include tablet {
+      align-items: center;
+    }
   }
   
   &__header-line {
@@ -315,15 +236,18 @@
     line-height: 80%;
     letter-spacing: -1px;
     line-height: 1.1;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     text-align: left;
     padding-bottom: 1rem;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 100%;
-      font-size: 3.75rem;
       padding-bottom: 0;
-      }
+    }
+
+    @include desktop {
+      font-size: 4rem;
+    }
   }
 
   &--bold {
@@ -340,23 +264,29 @@
     align-items: center;
     width: 100%;
     
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 30%;
     }
   }
 
   &__image {
     position: relative;
-    border-radius: 50% 50%;
-    height: 15rem;
-
-    @media screen and (min-width: 768px) {
-      margin-right: 2rem;
-      height: 16rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: 40% 50%;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 4px 8px 8px #19223d;
+    margin-top: 2rem;
+    
+    @include tablet {
+      width: 16rem;
+      margin-top: 0;
     }
-
-    @media screen and (min-width: 1280px) {
-      height: 18rem;
+    
+    @include desktop {
+      height: 30rem;
+      width: 25rem;
     }
   }
 
@@ -373,21 +303,18 @@
     }
   }
 
-
   &__position {
     font-weight: 400;
     font-size: 1rem;
     width: 100%;
-    max-width: 18.75rem;
     color: #F2B33D;
     position: relative;
-    left: -0.35rem;
     
-    @media screen and (min-width: 768px) {
+    
+    @include tablet {
       align-self: flex-start;
-      width: 35rem;
+      width: 23rem;
       max-width: 100%;
-      font-size: 1.25rem;
       left: 0;
     }
   }
@@ -403,22 +330,22 @@
   min-width: 16rem;
   scroll-snap-align: center;
   
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 0 4rem;
   }
 
   &__header {
     font-size: 3rem;
-    text-align: center;
     margin: 5rem 0 3rem 0;
   }
 
   &__label {
     margin-bottom: 1rem;
     font-size: 2rem;
-    text-decoration: underline;
 
-    @media screen and (min-width: 768px) {
+    @include desktop {
+      width: 50%;
+      text-align: center;
       font-size: 3rem;
     }
   }
@@ -428,24 +355,8 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    max-width: 59.375rem;
     margin: 0 auto;
-    margin-bottom: 5rem;
-  }
-
-  &__brainstation-graduate {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 1rem;
-
-  }
-  &__brainstation {
-    height: 2rem;
-
-    @media screen and (min-width: 768px) {
-      height: 3rem;
-    }
+    max-width: 100rem;
   }
 
   &__link {
@@ -454,27 +365,47 @@
 
   &__text-container {
     border-radius: 1rem;
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+    height: 100%;
+    background-color: #19223d;
+    box-shadow: inset 0px 0px 1rem black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+
+    @include desktop {
+      align-items: center;
+    }
+    
+    &--skills {
+      flex-direction: column-reverse;
+    }
+
+    @include desktop {
+      align-items: center;
+      flex-direction: row;
+    }
+
+  }
+
+  &__information-container {
+    @include desktop {
+      width: 50%;
+      border-left: 1px solid #F2B33D;
+    }
   }
 
   &__information {
-    margin-top: 2rem;
+    margin: 1rem 0;
     font-size: 1rem;
     color: #EEEEF0;
 
-    @media screen and (min-width: 768px) {
-      font-size: 1.125rem;
-    }
-  }
-  
-  &__graduate-label {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: inline-block;
-    text-decoration: underline;
-
-    @media screen and (min-width: 768px) {
-      font-size: 2rem;
+    @include desktop {
+      padding: 0 3rem;
+      width: 95%;
+      margin: 2rem auto;
     }
   }
 
@@ -483,7 +414,7 @@
     align-self: flex-end;
     font-weight: bold;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 1.625rem;
     }
   }
@@ -501,40 +432,64 @@
   align-content: space-evenly;
   padding: 0 2rem 2rem 2rem;
   text-align: left;
-  background-color: #EEEEF0;
+  background-color: #253259;
   min-width: 16rem;
   margin: 0 auto;
-  border-bottom: 1px solid #CCC;
   
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 2rem 4rem 2rem 4rem;
   }
   
+  &__text-section {
+    @include desktop {
+      width: 50%;
+      padding: 1rem;
+    }
+  }
+
+  &__color-wrapper {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
   &__header {
-    text-align: center;
-    font-size: 3rem;
-    color: #253259;
-    margin: 3rem 0 0 0;
-  
+    font-size: 2rem;
+    color: #F2B33D;
+
+    @include desktop {
+      text-align: center;
+      font-size: 3rem;
+    }
   }
 
   &__sub-header {
     width: 100%;
     margin: 2rem auto;
-    color: #253259;
-    text-align: center;
-    font-size: 1.125rem;
+    color: #eeeef0;
+    font-size: 1rem;
     font-weight: 400;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin: 2rem auto;
-      max-width: 42.5rem;
+    }
+
+    @include desktop {
+      padding: 0 2rem;
+      width: 95%;
+    }
+    
+    &--projects {
+
+      border-bottom: 1px solid #F2B33D;
+      padding-bottom: 2rem;
+      @include desktop {
+        text-align: center;
+      }
     }
   }
 
   &__link {
-    // text-decoration: none;
-    color: #253259;
+    color: #eeeef0;
   }
 
   &__icon-label {
@@ -546,11 +501,13 @@
     padding: 0.5rem;
     margin: 0;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: .875rem;
       transition: all 0.2s ease-in-out;
     }
   }
+
+  
 
   &__icon-box {
     display: flex;
@@ -559,11 +516,12 @@
     width: 6rem;
     height: 6.5rem;
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    background-color: #eeeef0;
     border: 1px solid #CCC;
     transition: all 0.1s ease-in-out;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 7rem;
       height: 8rem;
     }
@@ -579,8 +537,12 @@
       }
 
       .skills__icon {
-        animation: wiggle 0.2s ease-in-out infinite;
         transition: all 0.1s ease-in-out;
+        
+        &:hover {
+          transform: scale(1.1, 1.1);
+          transition: all 0.1s ease-in-out;
+        }
       }
     }
 
@@ -590,7 +552,7 @@
     font-size: .75rem;
     margin-bottom: 2rem;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 1rem;
     }
   }
@@ -600,21 +562,19 @@
     flex-direction: column;
     flex-wrap: nowrap;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       height: auto;
     }
   }
 
   &__label {
-    text-decoration: underline;
-    text-align: center;
     display: inline-block;
     font-size: 1.3125rem;
     font-weight: bold;
     margin: 2rem 0 4rem 0;
     color: #253259;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 2rem;
     }
   }
@@ -624,7 +584,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
+    flex-grow: 1;
+    border-top: 1px solid #F2B33D;
+    padding-top: 2rem;
+    
+    @include desktop {
+      border-top: 0;
+      border-right: 1px solid #F2B33D;
+      
+    }
   }
 
   &__technology-group {
@@ -632,7 +600,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 59rem;
     height: 50rem;
     max-height: 25rem;
     flex-wrap: wrap;
@@ -640,9 +607,12 @@
     align-content: space-between;
     transition: all 0.1s ease-in-out;
     
-    @media screen and (min-width: 768px) {
+    @include tablet {
       transition: all 0.1s ease-in-out;
       max-height: 30rem;
+    }
+    @include desktop {
+      padding-right: 4rem;
     }
   }
 
@@ -659,7 +629,7 @@
       animation: wiggle 0.2s ease-in-out infinite;
     }
     
-    @media screen and (min-width: 768px) {
+    @include tablet {
       padding: 1rem;
       height: 6rem; 
       width: 6rem;
@@ -675,9 +645,26 @@
   align-items: center;
   padding: 0 2rem;
   text-align: left;
-  background-color: white;
+  background-color: #253259;
   min-width: 16rem;
   margin: 0 auto;
+  
+  &__project-collection {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row; 
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      margin-bottom: 2rem;
+    }
+  }
 
   &__responsive-container {
     display: flex;
@@ -687,9 +674,13 @@
     width: 100%;
     max-width: 100rem;
     margin: 0 auto;
+    padding: 2rem;
+    background-color: #19223d;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px 1rem black;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 0 4rem;
   }
 
@@ -700,7 +691,7 @@
   &__name {
     width: 5rem;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 8rem;
     }
   }
@@ -719,14 +710,16 @@
   }
 
   &__header {
-    color: #253259;
+    color: #F2B33D;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     margin: 3rem 0 1rem 0;
+    align-self: flex-start;
 
-    @media screen and (min-width: 768px) {
-        font-size: 3rem;
+    @include desktop {
+      align-self: center;
+      font-size: 3rem;
     }
 }
 
@@ -734,23 +727,16 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     border: 1px solid #EEEEF0;
-    box-shadow: 0px 4px 0.5rem #EEEEF0;
-    border-radius: 1rem;
-    padding: 0 1rem 1rem 1rem;
-    margin-bottom: 4rem;
+    box-shadow: 0px 0px 16px 4px black;
+    margin: 1rem;
+    height: 38.3125rem;
     position: relative;
     width: calc(100vw - 4rem);
+    max-width: 21.875rem;
     transition: border-image 0.2s ease-in-out;
-    background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
-
-    @media screen and (min-width: 768px) {
-      padding: 1rem;
-      flex-direction: row;
-      max-width: 87.5rem;
-    }
 
     }
 
@@ -767,17 +753,9 @@
     align-items: center;
     justify-content: center;
     width: calc(100vw - 4rem);
+    max-width: 21.875rem;
     background-color: white;
-    margin-bottom: 1rem;
-    border: 1px solid #EEEEF0;
-    border-radius: 1rem 1rem 0 0;
-    
-    @media screen and (min-width: 768px) {
-      width: 15rem;
-      box-shadow: 0px 0px 8px #CCC;
-      border-radius: 1rem;
-      margin-right: 1rem;
-    }
+    max-height: 16rem;
   }
 
   &__visualeyes-description-links {
@@ -786,8 +764,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 70%;
     }
   }
@@ -799,8 +778,7 @@
     color: #253259;
     max-width: 23.125rem;
 
-    @media screen and (min-width: 768px) {
-      font-size: 1.125rem;
+    @include tablet {
       max-width: 100%;
     }
   }
@@ -808,27 +786,16 @@
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     width: calc(100vw - 4rem);
-    box-shadow: 0px 4px 0.5rem #EEEEF0;
-    padding: 0 1rem 1rem 1rem;
-    border-radius: 1rem;
-    margin: 1rem;
+    max-width: 21.875rem;
+    height: 38.3125rem;
     background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(238, 238, 238) 100%);
     transition: box-shadow 0.2s ease-in-out;
-    margin-bottom: 2rem;
+    margin: 1rem;
     border-bottom: 1px solid #EEEEF0;
-    border: 1px solid #EEEEF0;
-    
-    
-    @media screen and (min-width: 768px) {
-      height: 18.75rem;
-      max-width: 87.5rem;
-      padding: 1rem;
-      flex-direction: row;
-      align-items: stretch;
-    }
+    box-shadow: 0px 0px 16px 4px black;
   }
 
   &__bmo-icon-logo {
@@ -836,24 +803,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-
-    @media screen and (min-width: 768px) {
-      margin-right: 1rem;
-      width: 15rem;
-    }
   }
 
   &__bmo-image {
     object-fit: cover;
     width: calc(100vw - 4rem);
+    max-width: 21.875rem;
     height: 100%;
     max-height: 16rem;
-    border-radius: 1rem 1rem 0 0;
-    border: 1px solid #EEEEF0;
+
     
-    @media screen and (min-width: 768px) {
-      border-radius: 1rem;
-      box-shadow: 0px 0px 8px #CCC;
+    @include tablet {
       width: 100%;
     }
   }
@@ -861,35 +821,10 @@
   &__image {
     object-fit: cover;
     width: calc(100vw - 4rem);
+    max-width: 21.875rem;
     height: 100%;
     max-height: 16rem;
-    border-radius: 1rem 1rem 0 0;
-    border: 1px solid #EEEEF0;
 
-    &--quantipomo {
-      object-position: 55% 50%;
-    }
-    
-    @media screen and (min-width: 768px) {
-      border-radius: 1rem;
-      box-shadow: 0px 0px 8px #CCC;
-      width: 100%;
-    }
-
-  }
-
-  &__image--quantipomo {
-    object-fit: cover;
-    width:100%;
-    height: 100%;
-    border-radius: 1rem 1rem 0 0;
-    border: 1px solid #EEEEF0;
-
-    @media screen and (min-width: 768px) {
-      border-radius: 1rem;
-      box-shadow: 0px 0px 8px #CCC;
-      width: 100%;
-    }
   }
 
   &__bmo-logo {
@@ -904,8 +839,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 70%;
     }
   }
@@ -919,6 +855,7 @@
     text-align: center;
     
     &--bandsite {
+      margin: 1rem 0;
       background-color: #323232;
     }
     
@@ -933,7 +870,6 @@
 
   &__links {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
   }
@@ -947,6 +883,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: -3px;
+    left: -3px;
+    box-shadow: 3px 5px #ccc;
     width: 100%;
     max-width: 18rem;
     height: 3rem;
@@ -962,9 +902,14 @@
     &:hover {
       background: #EEEEF0;
     }
+
+    &:active {
+      top: 0;
+      left: 0; 
+      box-shadow: 0px 0px;
+    }
     
-    @media screen and (min-width: 768px) {
-      font-size: 1.125rem;
+    @include tablet {
       width: 10rem;
     }
   }
@@ -975,12 +920,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 3rem);
-  max-height: 67.5rem; 
-  min-height: 67.5rem;
   background-color: #253259;
   color: #EEEEF0;
-  padding: 0 2rem;
+  padding: 0 4rem;
 
   &__responsive-container {
     display: flex;
@@ -989,6 +931,16 @@
     align-items: center;
     border-radius: 1rem;
     height: 100%;
+    max-width: 100rem;
+    margin: 3rem 0;
+    background-color: #19223d;
+    box-shadow: inset 0px 0px 1rem black;
+    padding: 2rem;
+
+    @include desktop {
+      flex-direction: row;
+      
+    }
   }
 
   &__message {
@@ -1003,29 +955,41 @@
   &__text-box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
 
-    max-width: 46.875rem;
+    @include desktop {
+      border-bottom: 0;
+      width: 50%;
+    }
   }
 
   &__cta {
-    font-size: 3rem;
-    margin: 5rem 0 2rem 0;
+    align-self: flex-start;
+    color: #F2B33D;
+    font-size: 2rem;
+    margin: 2rem 0;
  
-    @media screen and (min-width: 768px) {
-      font-size: 4rem;
+    @include desktop {
+      font-size: 3rem;
+      align-self: center;
     }
+
   }
 
   &__information {
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     margin-bottom: 1rem;
 
-    @media screen and (min-width: 768px) {
-      font-size: 1.25rem;
+    @include desktop {
+      text-align: center;
+      padding: 0 4rem;
     }
+
   }
 
   &__react {
@@ -1035,7 +999,6 @@
 
   &__text-input {
     padding: 1rem;
-    border-radius: 1rem;
     border: 1px solid #EEEEF0;
     margin: 1rem 0;
   }
@@ -1048,7 +1011,7 @@
     border-top: 1rem solid #253259;
     height: 100%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-left: 2rem;
       border-top: 0;
       border-left: 1rem solid #253259;
@@ -1085,16 +1048,23 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    border-top: 1px solid #F2B33D;
+
+    @include desktop {
+      width: 50%;
+      border-top: 0;
+      border-left: 1px solid #F2B33D;
+      padding: 0 4rem;
+    }
   }
 
   &__input {
-    border-radius: 1rem;
     border: 0px;
     width: 100%;
     height: 2.5rem;
     padding: 1rem;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 100%;
     }
   }
@@ -1111,13 +1081,13 @@
     align-items: center;
     margin: 1rem 0;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 100%;
     }
   }
 
   &__message-input {
-    height: 8rem;
+    height: 7rem;
     resize: none;
   }
 
@@ -1144,7 +1114,7 @@
       background-color: #EC9F10;
     }
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 10rem;
       height: 3rem;
     }
