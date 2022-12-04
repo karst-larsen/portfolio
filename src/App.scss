@@ -648,6 +648,21 @@
   background-color: #253259;
   min-width: 16rem;
   margin: 0 auto;
+
+  &__stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 1rem;
+    height: 5rem;
+    flex-wrap: wrap;
+  }
+
+  &__stack-icon {
+    margin: 0 0.25rem;
+    height: 2rem;
+  }
   
   &__project-collection {
     display: flex;
@@ -700,7 +715,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 5.5rem;
+    height: 4rem;
   }
   
   &__multiply {
@@ -741,10 +756,11 @@
     }
 
   &__visualeyes-logo {
-    width: 18rem;
+    width: 14rem;
     align-self: center;
     position: relative;
     left: 5px;
+    height: 4rem;
   }
 
   &__visualeyes-icon-logo {
@@ -761,14 +777,11 @@
   &__visualeyes-description-links {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
-
-    @include tablet {
-      width: 70%;
-    }
+    margin: 1rem 0;
   }
 
   &__information {
@@ -777,6 +790,7 @@
     margin: 1rem 0;
     color: #253259;
     max-width: 23.125rem;
+    height: 5rem;
 
     @include tablet {
       max-width: 100%;
@@ -802,7 +816,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
   }
 
   &__bmo-image {
@@ -825,6 +838,12 @@
     height: 100%;
     max-height: 16rem;
 
+    &--brainflix {
+      object-fit: cover;
+      max-width: 22rem;
+      height: 14rem;
+    }
+
   }
 
   &__bmo-logo {
@@ -836,13 +855,17 @@
   &__bmo-description-links {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    margin: 1rem 0;
+  }
 
-    @include tablet {
-      width: 70%;
+  &__logo {
+    &--brainflix {
+      width: 80%;
+      height: 4rem;
     }
   }
 
@@ -855,13 +878,14 @@
     text-align: center;
     
     &--bandsite {
-      margin: 1rem 0;
+      width: 80%;
       background-color: #323232;
     }
-    
-    &--quantipomo {
-      background-color: #3098BB;
+
+    &--brainflix {
+      padding: 0;
     }
+    
   }
 
   &__quantipomo-logo {
@@ -922,7 +946,11 @@
   align-items: center;
   background-color: #253259;
   color: #EEEEF0;
-  padding: 0 4rem;
+  padding: 0 2rem;
+
+  @include tablet {
+    padding: 0 4rem;
+  }
 
   &__responsive-container {
     display: flex;

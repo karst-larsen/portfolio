@@ -3,6 +3,8 @@ import VisualEye from "../../components/VisualEye/VisualEye";
 import brainstationIcon from "../../assets/icons/brainstation.svg";
 import visualEyesLogo from "../../assets/icons/spectrumVisualEyes.png";
 import bmoImage from "../../assets/images/bmo-image.png";
+import brainFlixImage from "../../assets/images/image0.jpeg";
+import brainFlixLogo from "../../assets/images/BrainFlix-logo.svg";
 import bmoLogo from "../../assets/images/bmo-logo.png";
 import personalIcon from "../../assets/images/personal.jpg";
 import bandSiteIcon from "../../assets/images/band.jpeg";
@@ -131,6 +133,78 @@ const HomePage = () => {
             programming passion is building interactive web applications!
           </h3>
           <div className="projects__project-collection">
+            <div className="projects__container">
+              <div className="projects__bmo-icon-logo">
+                <img
+                  src={brainFlixImage}
+                  alt="Action shot of BMX bikers"
+                  className="projects__image projects__image--brainflix"
+                />
+              </div>
+              <div className="projects__bmo-description-links">
+                <div className="projects__project-banner projects__project-banner--brainflix">
+                  <img
+                    src={brainFlixLogo}
+                    alt="BrainFlix Logo"
+                    className="projects__logo--brainflix"
+                  />
+                </div>
+                <p className="projects__information">
+                  A full stack CRUD application, featuring a list of videos,
+                  video details and comments hosted on a back end server.
+                </p>
+                <div className="projects__links">
+                  <a
+                    href="https://karsten-oneilllarsen-brainflix.vercel.app/"
+                    className="projects__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open
+                  </a>
+                  <a
+                    href="https://github.com/karst-larsen/karsten-oneilllarsen-brainflix"
+                    className="projects__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <div className="projects__stack">
+                  <img
+                    src={languagesData[0].image}
+                    alt="HTML Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[1].image}
+                    alt="CSS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[2].image}
+                    alt="Javascript Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[3].image}
+                    alt="SASS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[4].image}
+                    alt="React Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[7].image}
+                    alt="Express Icon"
+                    className="projects__stack-icon"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="projects__visualeyes-container">
               <div className="projects__visualeyes-icon-logo">
                 <VisualEye />
@@ -164,6 +238,38 @@ const HomePage = () => {
                     GitHub
                   </a>
                 </div>
+                <div className="projects__stack">
+                  <img
+                    src={languagesData[0].image}
+                    alt="HTML Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[1].image}
+                    alt="CSS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[2].image}
+                    alt="Javascript Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[3].image}
+                    alt="SASS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[4].image}
+                    alt="React Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[6].image}
+                    alt="ToneJS Icon"
+                    className="projects__stack-icon"
+                  />
+                </div>
               </div>
             </div>
             <div className="projects__container">
@@ -189,8 +295,9 @@ const HomePage = () => {
                   />
                 </div>
                 <p className="projects__information">
-                  A hackathon group challenge to improve the UX for BMO's
-                  Newcomers-To-Canada (NTC) page.
+                  A hackathon group challenge with a cross-functional team to
+                  improve the UX for BMO's Newcomers-To-Canada page. (Mobile
+                  design)
                 </p>
                 <div className="projects__links">
                   <a
@@ -210,6 +317,33 @@ const HomePage = () => {
                     GitHub
                   </a>
                 </div>
+                <div className="projects__stack">
+                  <img
+                    src={languagesData[0].image}
+                    alt="HTML Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[1].image}
+                    alt="CSS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[2].image}
+                    alt="Javascript Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[3].image}
+                    alt="SASS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[4].image}
+                    alt="React Icon"
+                    className="projects__stack-icon"
+                  />
+                </div>
               </div>
             </div>
             <div className="projects__container">
@@ -217,7 +351,7 @@ const HomePage = () => {
                 <img
                   src={bandSiteIcon}
                   className="projects__bmo-image"
-                  alt="BandSite Group"
+                  alt="BandSite group shot"
                 />
               </div>
               <div className="projects__bmo-description-links">
@@ -249,6 +383,28 @@ const HomePage = () => {
                   >
                     GitHub
                   </a>
+                </div>
+                <div className="projects__stack">
+                  <img
+                    src={languagesData[0].image}
+                    alt="HTML Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[1].image}
+                    alt="CSS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[2].image}
+                    alt="Javascript Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[3].image}
+                    alt="SASS Icon"
+                    className="projects__stack-icon"
+                  />
                 </div>
               </div>
             </div>
