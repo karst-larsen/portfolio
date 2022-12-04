@@ -116,10 +116,10 @@ const HomePage = () => {
             <div className="skills__text-section">
               <h2 className="skills__header">Full Stack Skill Set</h2>
               <p className="skills__sub-header">
-                A collection of software and languages that I've built websites,
-                applications, and digital content with. I'm also eager to learn
-                new frameworks and developer tools to expand my skill set! I'm
-                currently breaking into 3D animation by learning Three.js.
+                A collection of software and languages that I've built websites
+                and applications with. I'm also eager to learn new frameworks
+                and developer tools to expand my skill set! I'm currently
+                breaking into 3D animation by learning Three.js.
               </p>
             </div>
           </div>
@@ -129,8 +129,7 @@ const HomePage = () => {
         <div className="projects__responsive-container">
           <h2 className="projects__header">PROJECTS</h2>
           <h3 className="skills__sub-header skills__sub-header--projects">
-            A selection of projects from past and present. My current
-            programming passion is building interactive web applications!
+            A selection of projects from past and present.
           </h3>
           <div className="projects__project-collection">
             <div className="projects__container">
@@ -151,7 +150,7 @@ const HomePage = () => {
                 </div>
                 <p className="projects__information">
                   A full stack CRUD application, featuring a list of videos,
-                  video details and comments hosted on a back end server.
+                  video details and comments stored on a live back end server.
                 </p>
                 <div className="projects__links">
                   <a
