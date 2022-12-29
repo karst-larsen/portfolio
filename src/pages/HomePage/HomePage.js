@@ -9,6 +9,10 @@ import bmoLogo from "../../assets/images/bmo-logo.png";
 import personalIcon from "../../assets/images/personal.jpg";
 import bandSiteIcon from "../../assets/images/band.jpeg";
 import bandSiteLogo from "../../assets/images/Logo-bandsite.svg";
+import ecomImage from "../../assets/images/ecom-image.png";
+import cartPlus from "../../assets/images/CART+.png";
+import biggieImage from "../../assets/images/biggie-image.png";
+import biggieLogo from "../../assets/images/biggies-burgers-logo.png";
 import { languagesData } from "../../assets/utils/skillsData";
 
 const HomePage = () => {
@@ -116,10 +120,10 @@ const HomePage = () => {
             <div className="skills__text-section">
               <h2 className="skills__header">Full Stack Skill Set</h2>
               <p className="skills__sub-header">
-                A collection of software and languages that I've built websites,
-                applications, and digital content with. I'm also eager to learn
-                new frameworks and developer tools to expand my skill set! I'm
-                currently breaking into 3D animation by learning Three.js.
+                A collection of software and languages that I've built websites
+                and applications with. I'm also eager to learn new frameworks
+                and developer tools to expand my skill set! I'm currently
+                breaking into 3D animation by learning Three.js.
               </p>
             </div>
           </div>
@@ -129,33 +133,32 @@ const HomePage = () => {
         <div className="projects__responsive-container">
           <h2 className="projects__header">PROJECTS</h2>
           <h3 className="skills__sub-header skills__sub-header--projects">
-            A selection of projects from past and present. My current
-            programming passion is building interactive web applications!
+            A selection of projects from past and present.
           </h3>
           <div className="projects__project-collection">
             <div className="projects__container">
               <div className="projects__bmo-icon-logo">
                 <img
-                  src={brainFlixImage}
-                  alt="Action shot of BMX bikers"
+                  src={biggieImage}
+                  alt="Biggie"
                   className="projects__image projects__image--brainflix"
                 />
               </div>
               <div className="projects__bmo-description-links">
-                <div className="projects__project-banner projects__project-banner--brainflix">
+                <div className="projects__project-banner projects__project-banner--biggie">
                   <img
-                    src={brainFlixLogo}
-                    alt="BrainFlix Logo"
-                    className="projects__logo--brainflix"
+                    src={biggieLogo}
+                    alt="Biggies Burgers Logo"
+                    className="projects__logo--biggie"
                   />
                 </div>
                 <p className="projects__information">
-                  A full stack CRUD application, featuring a list of videos,
-                  video details and comments hosted on a back end server.
+                  A concept for a contemporary burger restaurant. Created with
+                  NextJS, uses TailwindCSS for styling and GSAP for animations.
                 </p>
                 <div className="projects__links">
                   <a
-                    href="https://karsten-oneilllarsen-brainflix.vercel.app/"
+                    href="https://biggie-psi.vercel.app/"
                     className="projects__link"
                     target="_blank"
                     rel="noreferrer"
@@ -163,7 +166,7 @@ const HomePage = () => {
                     Open
                   </a>
                   <a
-                    href="https://github.com/karst-larsen/karsten-oneilllarsen-brainflix"
+                    href="https://github.com/karst-larsen/biggie"
                     className="projects__link"
                     target="_blank"
                     rel="noreferrer"
@@ -173,23 +176,70 @@ const HomePage = () => {
                 </div>
                 <div className="projects__stack">
                   <img
-                    src={languagesData[0].image}
-                    alt="HTML Icon"
+                    src={languagesData[4].image}
+                    alt="React Icon"
                     className="projects__stack-icon"
                   />
                   <img
-                    src={languagesData[1].image}
-                    alt="CSS Icon"
+                    src={languagesData[5].image}
+                    alt="NextJS Icon"
                     className="projects__stack-icon"
                   />
                   <img
-                    src={languagesData[2].image}
-                    alt="Javascript Icon"
+                    src={languagesData[9].image}
+                    alt="Tailwind Icon"
+                    className="projects__stack-icon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="projects__container">
+              <div className="projects__bmo-icon-logo">
+                <img
+                  src={ecomImage}
+                  alt="Home page of Cart+"
+                  className="projects__image projects__image--brainflix"
+                />
+              </div>
+              <div className="projects__bmo-description-links">
+                <div className="projects__project-banner projects__project-banner--cartplus">
+                  <img
+                    src={cartPlus}
+                    alt="Cart+ Logo"
+                    className="projects__logo--cartplus"
+                  />
+                </div>
+                <p className="projects__information">
+                  A full stack eCommerce application using MongoDB, Express,
+                  React, and Node (MERN Stack). Uses Redux for state management.
+                </p>
+                <div className="projects__links">
+                  <a
+                    href="https://ecom-shop.up.railway.app/"
+                    className="projects__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open
+                  </a>
+                  <a
+                    href="https://github.com/karst-larsen/MERN-eCommerce"
+                    className="projects__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <div className="projects__stack">
+                  <img
+                    src={languagesData[13].image}
+                    alt="Mongo Icon"
                     className="projects__stack-icon"
                   />
                   <img
-                    src={languagesData[3].image}
-                    alt="SASS Icon"
+                    src={languagesData[12].image}
+                    alt="Express Icon"
                     className="projects__stack-icon"
                   />
                   <img
@@ -198,8 +248,19 @@ const HomePage = () => {
                     className="projects__stack-icon"
                   />
                   <img
-                    src={languagesData[7].image}
-                    alt="Express Icon"
+                    src={languagesData[11].image}
+                    alt="Node Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[10].image}
+                    alt="Bootstrap Icon"
+                    className="projects__stack-icon"
+                  />
+
+                  <img
+                    src={languagesData[6].image}
+                    alt="Redux Icon"
                     className="projects__stack-icon"
                   />
                 </div>
@@ -265,8 +326,71 @@ const HomePage = () => {
                     className="projects__stack-icon"
                   />
                   <img
-                    src={languagesData[6].image}
+                    src={languagesData[7].image}
                     alt="ToneJS Icon"
+                    className="projects__stack-icon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="projects__container">
+              <div className="projects__bmo-icon-logo">
+                <img
+                  src={brainFlixImage}
+                  alt="Action shot of BMX bikers"
+                  className="projects__image projects__image--brainflix"
+                />
+              </div>
+
+              <div className="projects__bmo-description-links">
+                <div className="projects__project-banner projects__project-banner--brainflix">
+                  <img
+                    src={brainFlixLogo}
+                    alt="BrainFlix Logo"
+                    className="projects__logo--brainflix"
+                  />
+                </div>
+                <p className="projects__information">
+                  A full stack CRUD application, featuring a list of videos,
+                  video details and comments stored on a live back end server.
+                </p>
+                <div className="projects__links">
+                  <a
+                    href="https://karsten-oneilllarsen-brainflix.vercel.app/"
+                    className="projects__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open
+                  </a>
+                  <a
+                    href="https://github.com/karst-larsen/karsten-oneilllarsen-brainflix"
+                    className="projects__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <div className="projects__stack">
+                  <img
+                    src={languagesData[3].image}
+                    alt="SASS Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[4].image}
+                    alt="React Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[11].image}
+                    alt="Node Icon"
+                    className="projects__stack-icon"
+                  />
+                  <img
+                    src={languagesData[12].image}
+                    alt="Express Icon"
                     className="projects__stack-icon"
                   />
                 </div>

@@ -297,6 +297,7 @@
   &__information {
     text-align: left;
     font-size: 1rem;
+    font-weight: bold;
 
     &:last-child {
       margin-bottom: 2rem;
@@ -304,7 +305,7 @@
   }
 
   &__position {
-    font-weight: 400;
+    font-weight: bold;
     font-size: 1rem;
     width: 100%;
     color: #F2B33D;
@@ -313,7 +314,7 @@
     
     @include tablet {
       align-self: flex-start;
-      width: 23rem;
+      width: 24rem;
       max-width: 100%;
       left: 0;
     }
@@ -400,6 +401,7 @@
   &__information {
     margin: 1rem 0;
     font-size: 1rem;
+    font-weight: bold;
     color: #EEEEF0;
 
     @include desktop {
@@ -467,7 +469,7 @@
     margin: 2rem auto;
     color: #eeeef0;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: bold;
 
     @include tablet {
       margin: 2rem auto;
@@ -551,6 +553,7 @@
   &__information {
     font-size: .75rem;
     margin-bottom: 2rem;
+    font-weight: bold;
 
     @include tablet {
       font-size: 1rem;
@@ -662,6 +665,15 @@
   &__stack-icon {
     margin: 0 0.25rem;
     height: 2rem;
+    width: 2.25rem;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+    bottom: 0;
+
+    &:hover {
+      bottom: 0.25rem;
+      transition: all 0.1s ease-in-out;
+    }
   }
   
   &__project-collection {
@@ -786,6 +798,7 @@
 
   &__information {
     font-size: 1rem;
+    font-weight: bold;
     text-align: center;
     margin: 1rem 0;
     color: #253259;
@@ -867,6 +880,18 @@
       width: 80%;
       height: 4rem;
     }
+
+    &--cartplus {
+      width: 40%;
+      height: 2.5rem;
+      margin-top: 0.5rem;
+    }
+
+    &--biggie {
+      width: 95%;
+      height: 4rem;
+      padding: 0.75rem;
+    }
   }
 
 
@@ -883,6 +908,15 @@
     }
 
     &--brainflix {
+      padding: 0;
+    }
+
+    &--cartplus {
+      background-color: rgb(235, 104, 100);
+      padding: 0.5rem;
+    }
+
+    &--biggie {
       padding: 0;
     }
     
@@ -1012,6 +1046,7 @@
     text-align: left;
     font-size: 1rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 
     @include desktop {
       text-align: center;
@@ -1098,6 +1133,7 @@
   }
 
   &__label {
+    font-weight: bold;
     align-self: flex-start;
     padding: 0.5rem 0;
   }
