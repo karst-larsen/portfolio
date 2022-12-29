@@ -61,7 +61,7 @@ export const languagesData = [
     link: "https://threejs.org/",
   },
   {
-    name: "TailwindCSS",
+    name: "Tailwind",
     image: tailwindIcon,
     link: "https://tailwindcss.com/",
   },
